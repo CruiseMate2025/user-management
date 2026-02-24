@@ -3,7 +3,7 @@ package org.genc.usermgmt.security;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.RequiredArgsConstructor; // Added import
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.genc.usermgmt.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;

@@ -5,15 +5,16 @@ import lombok.RequiredArgsConstructor;
 import org.genc.usermgmt.filter.JwtAuthenticationFilter;
 import org.genc.usermgmt.security.CustomAccessDeniedHandler;
 import org.genc.usermgmt.security.CustomAuthenticationEntryPoint;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod; // Added import
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
-import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity; // Added import
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer; // Added import
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,8 +24,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import java.util.Arrays;
-import java.util.List; // Corrected import to List
+import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -35,7 +35,8 @@ public class SecurityConfig {
     private final CustomAuthenticationEntryPoint authenticationEntryPoint;
     private final CustomAccessDeniedHandler accessDeniedHandler;
 
-    private static  final String BASE_SERVICE_PATH= "/api/v1/userservice";
+    @Value("${api.base-path}")
+    private String basePath;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -61,18 +62,16 @@ public class SecurityConfig {
 
                 // 5. Define access rules for API endpoints
                 .authorizeHttpRequests(authorize -> authorize
-                        // Specific public endpoints for auth
-                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                        .requestMatchers(HttpMethod.GET, BASE_SERVICE_PATH + "/cruises/**").permitAll()
-                        .requestMatchers(HttpMethod.POST, BASE_SERVICE_PATH + "/login").permitAll()
-                        .requestMatchers(HttpMethod.POST, BASE_SERVICE_PATH + "/register/**").permitAll() // Assuming registration is here
+                        .requestMatchers(HttpMethod.GET, basePath + "/cruises/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, basePath + "/auth/login").permitAll()
+                        .requestMatchers(HttpMethod.POST, basePath + "/register/**").permitAll() // Assuming registration is here
 
                         // Other public service endpoints
                         .requestMatchers("/actuator/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
 
                         // Restrict access for authenticated requests
-                        .requestMatchers(BASE_SERVICE_PATH+"/users/**").hasAnyRole("USER", "ADMIN","PASSENGER")
-                        .requestMatchers(BASE_SERVICE_PATH+"/roles/**").hasRole("ADMIN")
+                        .requestMatchers(basePath+"/users/**").hasAnyRole("USER", "ADMIN","PASSENGER")
+                        .requestMatchers(basePath+"/roles/**").hasRole("ADMIN")
 
                         // All other endpoints require authentication
                         .anyRequest().authenticated()
@@ -102,7 +101,7 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         // Use List.of for immutable, cleaner lists
         configuration.setAllowedOrigins(List.of("http://localhost:3000", "http://localhost:5173"));
-        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS","PATCH"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

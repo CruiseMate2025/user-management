@@ -16,11 +16,16 @@ import java.util.NoSuchElementException;
 @RestControllerAdvice
 public class GlobalRestAPIExceptionHandler {
 
+    String message = "message";
+    String error = "error";
+    String status = "status";
+    String timestamp = "timestamp";
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, String>> handleValidationExceptions(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
-        ex.getBindingResult().getFieldErrors().forEach(error ->
-                errors.put(error.getField(), error.getDefaultMessage()));
+        ex.getBindingResult().getFieldErrors().forEach(err ->
+                errors.put(err.getField(), err.getDefaultMessage()));
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
@@ -32,10 +37,10 @@ public class GlobalRestAPIExceptionHandler {
     @ExceptionHandler(NoSuchElementException.class)
     public ResponseEntity<Object> handleServiceResourceNotFoundException(NoSuchElementException ex) {
         Map<String, Object> body = new LinkedHashMap<>();
-        body.put("timestamp", LocalDateTime.now());
-        body.put("status", HttpStatus.NOT_FOUND.value());
-        body.put("error", "Resource Not Found");
-        body.put("message", ex.getMessage());
+        body.put(timestamp, LocalDateTime.now());
+        body.put(status, HttpStatus.NOT_FOUND.value());
+        body.put(error, "Resource Not Found");
+        body.put(message, ex.getMessage());
 
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
@@ -47,10 +52,10 @@ public class GlobalRestAPIExceptionHandler {
     @ExceptionHandler(NoResourceFoundException.class)
     public ResponseEntity<Object> handleResourceNotFoundException(NoResourceFoundException ex) {
         Map<String, Object> body = new LinkedHashMap<>();
-        body.put("timestamp", LocalDateTime.now());
-        body.put("status", HttpStatus.NOT_FOUND.value());
-        body.put("error", "Resource Not Found");
-        body.put("message", ex.getMessage());
+        body.put(timestamp, LocalDateTime.now());
+        body.put(status, HttpStatus.NOT_FOUND.value());
+        body.put(error, "Resource Not Found");
+        body.put(message, ex.getMessage());
 
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
@@ -63,12 +68,11 @@ public class GlobalRestAPIExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleGenericException(Exception ex) {
         Map<String, Object> body = new LinkedHashMap<>();
-        body.put("timestamp", LocalDateTime.now());
-        body.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
-        body.put("error", "Internal Server Error");
+        body.put(timestamp, LocalDateTime.now());
+        body.put(status, HttpStatus.INTERNAL_SERVER_ERROR.value());
+        body.put(error, "Internal Server Error");
         // For security, avoid returning the full stack trace; a generic message is often better.
-        body.put("message", "An unexpected error occurred. Please try again later.");
-        // In a real app, you would log the full error here for system monitoring: log.error("Unhandled Exception", ex);
+        body.put(message, "An unexpected error occurred. Please try again later.");
 
         return new ResponseEntity<>(body, HttpStatus.INTERNAL_SERVER_ERROR);
     }

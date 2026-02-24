@@ -13,7 +13,6 @@ import org.genc.usermgmt.util.JwtUtil;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -31,10 +30,10 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final CustomUserDetailsService userDetailsService;
 
 
-    // Define all paths that should NOT be filtered (i.e., public paths)
-    // NOTE: BASE_SERVICE_PATH should be accessible or hardcoded here if needed
+    // all paths that should NOT be filtered (i.e., public paths)
+    // BASE_SERVICE_PATH should be accessible or hardcoded here if needed
     private static final List<String> SKIPPED_PATHS = List.of(
-            "/api/v1/userservice/login",
+            "/api/v1/userservice/auth/login",
             "/api/v1/userservice/register",
             "/api/v1/userservice/cruises", // Add this to allow landing page access
             "/actuator",
@@ -48,10 +47,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String path = request.getRequestURI();
 
         // Match only POST requests for /login and /users (registration)
-        if (request.getMethod().equals(HttpMethod.POST.name())) {
-            if (path.startsWith("/api/v1/userservice/login") || path.startsWith("/api/v1/userservice/register")) {
+        if (request.getMethod().equals(HttpMethod.POST.name())&&(path.startsWith("/api/v1/userservice/login") || path.startsWith("/api/v1/userservice/register"))) {
                 return true;
-            }
         }
 
         // Match all other defined skipped paths regardless of HTTP method (e.g., swagger)
@@ -79,7 +76,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         // Validate token and set authentication
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             CustomUserDetails userDetails = userDetailsService.loadUserByUsername(username);
-            if (jwtUtil.validateToken(token, userDetails)) {
+            Boolean isValid = jwtUtil.validateToken(token, userDetails);
+            if (Boolean.TRUE.equals(isValid)) {
                 UsernamePasswordAuthenticationToken authToken =
                     new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));

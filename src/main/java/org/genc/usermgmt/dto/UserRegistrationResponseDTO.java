@@ -1,12 +1,8 @@
 package org.genc.usermgmt.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import org.genc.usermgmt.entity.Role;
 import org.genc.usermgmt.enums.RoleType;
-
-import java.util.Set;
 
 @Data
 @Builder

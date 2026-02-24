@@ -2,18 +2,18 @@ package org.genc.usermgmt.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.genc.usermgmt.dto.AdminUpdateRequestDTO;
 import org.genc.usermgmt.dto.UserRegistrationRequestDTO;
 import org.genc.usermgmt.dto.UserRegistrationResponseDTO;
-import org.genc.usermgmt.entity.Role;
 import org.genc.usermgmt.entity.User;
 import org.genc.usermgmt.enums.RoleType;
 import org.genc.usermgmt.exception.UserAlreadyExistsException;
-import org.genc.usermgmt.repo.RoleRepository;
 import org.genc.usermgmt.repo.UserRepository;
 import org.genc.usermgmt.service.api.RoleService;
 import org.genc.usermgmt.service.api.UserMgmtService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
 import java.util.Optional;
 
 @Service
@@ -70,15 +70,41 @@ public class UserMgmtServiceImpl implements UserMgmtService {
                 .username(persUser.getUsername())
                 .fullName(persUser.getFullName())
                 .email(persUser.getEmail())
-                .roles(java.util.Set.of(persUser.getRoles().getName())) // Wrap in a Set for DTO
+                .roles(persUser.getRoles().getName()) // Wrap in a Set for DTO
                 .userMessage(welcomeMessage)
                 .build();
-    }
-    private boolean isUserRoleExists(User userObj, RoleType newRole) {
-        return userObj.getRoles() != null && userObj.getRoles().getName().equals(newRole);
     }
     @Override
     public boolean isNewUser(String userName) {
         return userRepository.findByUsername(userName).isEmpty();
+    }
+
+    // Inside UserMgmtServiceImpl.java
+    @Override
+    public UserRegistrationResponseDTO updateUser(Long id, AdminUpdateRequestDTO request) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        if (request.getFullName() != null) user.setFullName(request.getFullName());
+        if (request.getEmail() != null) user.setEmail(request.getEmail());
+        if (request.getPhone() != null) user.setPhone(request.getPhone());
+        if (request.getUsername() != null) user.setUsername(request.getUsername());
+
+        if (request.getPassword() != null && !request.getPassword().isEmpty()) {
+            user.setPassword(passwordEncoder.encode(request.getPassword()));
+        }
+
+        return mapToResponseDTO(userRepository.save(user));
+    }
+
+    private UserRegistrationResponseDTO mapToResponseDTO(User user) {
+        return UserRegistrationResponseDTO.builder()
+                .id(user.getId())
+                .username(user.getUsername())
+                .email(user.getEmail())
+                .fullName(user.getFullName())
+                .userMessage("Profile settings updated successfully.")
+                .roles(user.getRoles() != null ? user.getRoles().getName() : null)
+                .build();
     }
 }

@@ -1,0 +1,1140 @@
+2026-02-17 14:19:06 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 33812 (C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration\target\classes started by 2464280 in C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration)
+2026-02-17 14:19:06 [userService,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-02-17 14:19:06 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-02-17 14:19:08 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17 14:19:08 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 236 ms. Found 2 JPA repository interfaces.
+2026-02-17 14:19:08 [userService,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=c149688c-c81b-35b4-8d44-aa9a3a079483
+2026-02-17 14:19:09 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8086 (http)
+2026-02-17 14:19:09 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 14:19:09 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 14:19:09 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 14:19:09 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 2841 ms
+2026-02-17 14:19:10 [userService,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17 14:19:10 [userService,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-02-17 14:19:10 [userService,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-02-17 14:19:10 [userService,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17 14:19:10 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-02-17 14:19:10 [userService,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@534d0cfa
+2026-02-17 14:19:10 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-02-17 14:19:10 [userService,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17 14:19:10 [userService,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-17 14:19:11 [userService,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17 14:19:12 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 14:19:12 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-17 14:19:12 [userService,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-17 14:19:12 [userService,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17 14:19:13 [userService,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-02-17 14:19:13 [userService,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-17 14:19:13 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8086 (http) with context path '/'
+2026-02-17 14:19:13 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-02-17 14:19:13 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 14:19:13 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 14:19:14 [userService,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 14:19:14 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 161 ms
+2026-02-17 14:19:14 [userService,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 16 endpoints beneath base path '/actuator'
+2026-02-17 14:19:14 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-02-17 14:19:14 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 8.161 seconds (process running for 9.017)
+2026-02-17 14:19:14 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-02-17 14:19:34 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-17 14:19:34 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-02-17 14:19:34 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 4 ms
+2026-02-17 14:19:35 [userService,/] ERROR o.g.u.filter.JwtAuthenticationFilter
+                - Error extracting username from token: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 5
+2026-02-17 14:19:35 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:19:35 [userService,/] ERROR o.g.u.filter.JwtAuthenticationFilter
+                - Error extracting username from token: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 5
+2026-02-17 14:19:35 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:19:52 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:19:52 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:19:59 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:19:59 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:20:11 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:20:11 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:20:25 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:20:25 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:24:33 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:24:33 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:24:35 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:24:35 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:24:43 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:24:43 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:24:43 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:24:43 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:24:52 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:24:52 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:25:10 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:25:10 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:25:12 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:25:12 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:27:12 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:27:12 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:28:05 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 14:28:05 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 14:28:05 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 14:28:05 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 14:28:05 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 14:28:05 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-02-17 14:28:05 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-02-17 14:28:10 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 29268 (C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration\target\classes started by 2464280 in C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration)
+2026-02-17 14:28:10 [userService,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-02-17 14:28:10 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-02-17 14:28:11 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17 14:28:11 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 162 ms. Found 2 JPA repository interfaces.
+2026-02-17 14:28:11 [userService,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=c149688c-c81b-35b4-8d44-aa9a3a079483
+2026-02-17 14:28:12 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8086 (http)
+2026-02-17 14:28:12 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 14:28:12 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 14:28:12 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 14:28:12 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 2471 ms
+2026-02-17 14:28:12 [userService,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17 14:28:12 [userService,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-02-17 14:28:12 [userService,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-02-17 14:28:13 [userService,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17 14:28:13 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-02-17 14:28:13 [userService,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f98cff
+2026-02-17 14:28:13 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-02-17 14:28:13 [userService,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17 14:28:13 [userService,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-17 14:28:14 [userService,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17 14:28:14 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 14:28:14 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-17 14:28:15 [userService,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-17 14:28:15 [userService,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17 14:28:16 [userService,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-02-17 14:28:16 [userService,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-17 14:28:16 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8086 (http) with context path '/'
+2026-02-17 14:28:16 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-02-17 14:28:16 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 14:28:16 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 14:28:16 [userService,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 14:28:16 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 121 ms
+2026-02-17 14:28:16 [userService,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 16 endpoints beneath base path '/actuator'
+2026-02-17 14:28:16 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-02-17 14:28:16 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 6.935 seconds (process running for 7.606)
+2026-02-17 14:28:16 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-02-17 14:28:21 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-17 14:28:21 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-02-17 14:28:21 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 7 ms
+2026-02-17 14:28:21 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:28:24 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:28:31 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 14:28:31 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 14:28:31 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 14:28:31 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 14:28:31 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 14:28:31 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-02-17 14:28:31 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-02-17 14:28:38 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 21532 (C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration\target\classes started by 2464280 in C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration)
+2026-02-17 14:28:38 [userService,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-02-17 14:28:38 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-02-17 14:28:40 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17 14:28:40 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 299 ms. Found 2 JPA repository interfaces.
+2026-02-17 14:28:41 [userService,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=c149688c-c81b-35b4-8d44-aa9a3a079483
+2026-02-17 14:28:41 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8086 (http)
+2026-02-17 14:28:41 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 14:28:41 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 14:28:42 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 14:28:42 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 3742 ms
+2026-02-17 14:28:42 [userService,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17 14:28:42 [userService,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-02-17 14:28:42 [userService,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-02-17 14:28:43 [userService,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17 14:28:43 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-02-17 14:28:43 [userService,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f98cff
+2026-02-17 14:28:43 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-02-17 14:28:43 [userService,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17 14:28:43 [userService,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-17 14:28:44 [userService,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17 14:28:44 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 14:28:45 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-17 14:28:45 [userService,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-17 14:28:45 [userService,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17 14:28:47 [userService,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-02-17 14:28:47 [userService,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-17 14:28:47 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8086 (http) with context path '/'
+2026-02-17 14:28:47 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-02-17 14:28:47 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 14:28:47 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 14:28:47 [userService,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 14:28:47 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 200 ms
+2026-02-17 14:28:47 [userService,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 16 endpoints beneath base path '/actuator'
+2026-02-17 14:28:47 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-02-17 14:28:47 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 10.697 seconds (process running for 11.843)
+2026-02-17 14:28:48 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-02-17 14:29:06 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-17 14:29:06 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-02-17 14:29:06 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 0 ms
+2026-02-17 14:29:06 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/login
+2026-02-17 14:29:06 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:32:44 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: newadmin, Assigned Role: ADMIN
+2026-02-17 14:32:44 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: newadmin, Assigned Role: ADMIN
+2026-02-17 14:32:44 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:c41cd6220eb08c4efdc2ee0bf1be4d1f)
+2026-02-17 14:32:57 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: newadmin, Assigned Role: ADMIN
+2026-02-17 14:32:57 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: newadmin, Assigned Role: ADMIN
+2026-02-17 14:32:57 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:c41cd6220eb08c4efdc2ee0bf1be4d1f)
+2026-02-17 14:33:12 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: PASSENGER
+2026-02-17 14:33:12 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: PASSENGER
+2026-02-17 14:33:12 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:c41cd6220eb08c4efdc2ee0bf1be4d1f)
+2026-02-17 14:33:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: rahul123, Assigned Role: CREW
+2026-02-17 14:33:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: rahul123, Assigned Role: CREW
+2026-02-17 14:33:27 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:c41cd6220eb08c4efdc2ee0bf1be4d1f)
+2026-02-17 14:35:54 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:35:54 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:35:54 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:c41cd6220eb08c4efdc2ee0bf1be4d1f)
+2026-02-17 14:37:20 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:37:20 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:37:20 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:c41cd6220eb08c4efdc2ee0bf1be4d1f)
+2026-02-17 14:37:21 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:37:21 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:37:21 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:c41cd6220eb08c4efdc2ee0bf1be4d1f)
+2026-02-17 14:37:22 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:37:22 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:37:22 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:c41cd6220eb08c4efdc2ee0bf1be4d1f)
+2026-02-17 14:39:29 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:29 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:29 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:c41cd6220eb08c4efdc2ee0bf1be4d1f)
+2026-02-17 14:39:29 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:29 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:29 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:29 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:29 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 14:39:29 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:29 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 14:39:29 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:29 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 14:39:29 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:29 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:29 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:29 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:29 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:29 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:29 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 14:39:29 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 14:39:29 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 14:39:38 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:38 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:38 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/admin/dashboard/cruises
+2026-02-17 14:39:38 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:38 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:38 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/admin/dashboard/cruises
+2026-02-17 14:39:40 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:40 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:40 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/users
+2026-02-17 14:39:40 [userService,/] WARN  o.g.u.s.CustomAccessDeniedHandler
+                - Access denied for user kittu123: Access Denied
+2026-02-17 14:39:40 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:39:40 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:39:40 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/users
+2026-02-17 14:39:40 [userService,/] WARN  o.g.u.s.CustomAccessDeniedHandler
+                - Access denied for user kittu123: Access Denied
+2026-02-17 14:44:29 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 14:44:29 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 14:44:29 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 14:44:29 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 14:44:29 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 14:44:29 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-02-17 14:44:29 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-02-17 14:44:35 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 532 (C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration\target\classes started by 2464280 in C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration)
+2026-02-17 14:44:35 [userService,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-02-17 14:44:35 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-02-17 14:44:36 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17 14:44:37 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 205 ms. Found 2 JPA repository interfaces.
+2026-02-17 14:44:37 [userService,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=c149688c-c81b-35b4-8d44-aa9a3a079483
+2026-02-17 14:44:38 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8086 (http)
+2026-02-17 14:44:38 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 14:44:38 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 14:44:38 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 14:44:38 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 2757 ms
+2026-02-17 14:44:38 [userService,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17 14:44:38 [userService,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-02-17 14:44:38 [userService,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-02-17 14:44:39 [userService,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17 14:44:39 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-02-17 14:44:39 [userService,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f1ffc18
+2026-02-17 14:44:39 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-02-17 14:44:39 [userService,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17 14:44:39 [userService,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-17 14:44:40 [userService,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17 14:44:40 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 14:44:41 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-17 14:44:41 [userService,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-17 14:44:41 [userService,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17 14:44:42 [userService,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-02-17 14:44:42 [userService,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-17 14:44:42 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8086 (http) with context path '/'
+2026-02-17 14:44:42 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-02-17 14:44:42 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 14:44:42 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 14:44:42 [userService,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 14:44:42 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 131 ms
+2026-02-17 14:44:42 [userService,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 16 endpoints beneath base path '/actuator'
+2026-02-17 14:44:42 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-02-17 14:44:42 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 7.765 seconds (process running for 8.592)
+2026-02-17 14:44:42 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-02-17 14:45:02 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-17 14:45:02 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-02-17 14:45:02 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 0 ms
+2026-02-17 14:45:02 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:45:03 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:45:03 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:3af8b10d780b7f490da7189432c084a0)
+2026-02-17 14:45:03 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:45:03 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:45:03 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:45:03 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 14:45:03 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:45:03 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:45:03 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 14:45:03 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:45:03 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 14:45:03 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:45:03 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:45:03 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:45:03 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:45:03 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:45:03 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:45:03 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 14:45:03 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 14:45:03 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 14:51:09 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:51:09 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:51:09 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:3af8b10d780b7f490da7189432c084a0)
+2026-02-17 14:51:09 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:51:09 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:51:09 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:51:09 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:51:09 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:51:09 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:51:09 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 14:51:09 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 14:51:09 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 14:51:09 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:51:09 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:51:09 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 14:51:09 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:51:09 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:51:09 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 14:51:09 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 14:51:09 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 14:51:09 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 14:52:40 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/users
+2026-02-17 14:52:40 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:54:13 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/users
+2026-02-17 14:54:13 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 14:55:33 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/users
+2026-02-17 14:55:33 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:01:49 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/register
+2026-02-17 15:01:49 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:03:04 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/register
+2026-02-17 15:03:04 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:03:37 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/register
+2026-02-17 15:03:37 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:04:30 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/register
+2026-02-17 15:04:30 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:10:38 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/auth/register
+2026-02-17 15:10:38 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:12:10 [userService,/] INFO  o.g.u.r.RegistrationController
+                - Registering new user with username: gopi
+2026-02-17 15:12:10 [userService,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
+                - New CruiseMate account created: gopi
+2026-02-17 15:13:14 [userService,/] INFO  o.g.u.r.RegistrationController
+                - Registering new user with username: shinde
+2026-02-17 15:13:15 [userService,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
+                - New CruiseMate account created: shinde
+2026-02-17 15:13:18 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:13:18 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /favicon.ico
+2026-02-17 15:13:18 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:13:51 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: shinde, Assigned Role: PASSENGER
+2026-02-17 15:13:51 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: shinde, Assigned Role: PASSENGER
+2026-02-17 15:13:51 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:3af8b10d780b7f490da7189432c084a0)
+2026-02-17 15:14:16 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: shinde, Assigned Role: PASSENGER
+2026-02-17 15:14:16 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: shinde, Assigned Role: PASSENGER
+2026-02-17 15:14:16 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:3af8b10d780b7f490da7189432c084a0)
+2026-02-17 15:14:20 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:14:20 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /favicon.ico
+2026-02-17 15:14:20 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:23:04 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 15:23:04 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 15:23:04 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 15:23:04 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 15:23:04 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 15:23:04 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-02-17 15:23:04 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-02-17 15:23:40 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 18012 (C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration\target\classes started by 2464280 in C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration)
+2026-02-17 15:23:40 [userService,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-02-17 15:23:40 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-02-17 15:23:41 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17 15:23:41 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 133 ms. Found 2 JPA repository interfaces.
+2026-02-17 15:23:41 [userService,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=c149688c-c81b-35b4-8d44-aa9a3a079483
+2026-02-17 15:23:41 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8086 (http)
+2026-02-17 15:23:41 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 15:23:41 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 15:23:42 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 15:23:42 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 1998 ms
+2026-02-17 15:23:42 [userService,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17 15:23:42 [userService,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-02-17 15:23:42 [userService,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-02-17 15:23:42 [userService,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17 15:23:42 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-02-17 15:23:42 [userService,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f98cff
+2026-02-17 15:23:42 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-02-17 15:23:42 [userService,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17 15:23:42 [userService,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-17 15:23:43 [userService,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17 15:23:43 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 15:23:44 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-17 15:23:44 [userService,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-17 15:23:44 [userService,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17 15:23:45 [userService,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-02-17 15:23:45 [userService,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-17 15:23:45 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8086 (http) with context path '/'
+2026-02-17 15:23:45 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-02-17 15:23:45 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 15:23:45 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 15:23:45 [userService,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 15:23:45 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 120 ms
+2026-02-17 15:23:45 [userService,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 16 endpoints beneath base path '/actuator'
+2026-02-17 15:23:45 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-02-17 15:23:45 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 6.031 seconds (process running for 6.639)
+2026-02-17 15:23:45 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-02-17 15:24:04 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-17 15:24:04 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-02-17 15:24:04 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 1 ms
+2026-02-17 15:24:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:24:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:24:27 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:9466affe05462230d403fc04e77d4534)
+2026-02-17 15:24:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:24:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:24:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:24:27 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:24:27 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:24:27 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:24:27 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 15:24:27 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 15:24:27 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 15:24:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:24:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:24:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:24:27 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:24:27 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:24:27 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:24:27 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 15:24:27 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 15:24:27 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 15:24:34 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:24:34 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /favicon.ico
+2026-02-17 15:24:34 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:27:26 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:26 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:26 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:26 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:26 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:26 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:26 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 15:27:26 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 15:27:26 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 15:27:26 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:26 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:26 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:26 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:26 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:26 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 15:27:26 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 15:27:26 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:26 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 15:27:26 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:26 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:26 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/admin/dashboard/cruises
+2026-02-17 15:27:26 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:26 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:27 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/admin/dashboard/cruises
+2026-02-17 15:27:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:27 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:27 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/users
+2026-02-17 15:27:27 [userService,/] WARN  o.g.u.s.CustomAccessDeniedHandler
+                - Access denied for user kittu123: Access Denied
+2026-02-17 15:27:27 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 15:27:27 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 15:27:27 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/users
+2026-02-17 15:27:27 [userService,/] WARN  o.g.u.s.CustomAccessDeniedHandler
+                - Access denied for user kittu123: Access Denied
+2026-02-17 15:29:03 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: falana12, Assigned Role: CREW
+2026-02-17 15:29:03 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: falana12, Assigned Role: CREW
+2026-02-17 15:29:03 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:9466affe05462230d403fc04e77d4534)
+2026-02-17 15:29:41 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kumar123, Assigned Role: PASSENGER
+2026-02-17 15:29:41 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kumar123, Assigned Role: PASSENGER
+2026-02-17 15:29:41 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:9466affe05462230d403fc04e77d4534)
+2026-02-17 15:30:31 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kumar123, Assigned Role: PASSENGER
+2026-02-17 15:30:31 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kumar123, Assigned Role: PASSENGER
+2026-02-17 15:30:31 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:9466affe05462230d403fc04e77d4534)
+2026-02-17 15:30:33 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:30:33 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /favicon.ico
+2026-02-17 15:30:33 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 15:49:42 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m59s436ms624µs).
+2026-02-17 16:40:46 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m33s804ms552µs400ns).
+2026-02-17 16:49:34 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 16:49:34 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 16:49:34 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 16:49:34 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 16:49:34 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 16:49:34 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-02-17 16:49:34 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-02-17 16:49:41 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 16996 (C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration\target\classes started by 2464280 in C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration)
+2026-02-17 16:49:41 [userService,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-02-17 16:49:41 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-02-17 16:49:42 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17 16:49:42 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 189 ms. Found 2 JPA repository interfaces.
+2026-02-17 16:49:43 [userService,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=c149688c-c81b-35b4-8d44-aa9a3a079483
+2026-02-17 16:49:43 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8086 (http)
+2026-02-17 16:49:43 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 16:49:43 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 16:49:43 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 16:49:43 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 2731 ms
+2026-02-17 16:49:44 [userService,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17 16:49:44 [userService,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-02-17 16:49:44 [userService,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-02-17 16:49:44 [userService,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17 16:49:44 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-02-17 16:49:44 [userService,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f98cff
+2026-02-17 16:49:44 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-02-17 16:49:44 [userService,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17 16:49:44 [userService,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-17 16:49:46 [userService,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17 16:49:46 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 16:49:46 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-17 16:49:46 [userService,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-17 16:49:46 [userService,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17 16:49:48 [userService,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-02-17 16:49:48 [userService,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-17 16:49:48 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8086 (http) with context path '/'
+2026-02-17 16:49:48 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-02-17 16:49:48 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-17 16:49:48 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-17 16:49:48 [userService,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-17 16:49:48 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 121 ms
+2026-02-17 16:49:48 [userService,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 16 endpoints beneath base path '/actuator'
+2026-02-17 16:49:48 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-02-17 16:49:48 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 8.283 seconds (process running for 9.178)
+2026-02-17 16:49:48 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-02-17 16:50:02 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-17 16:50:02 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-02-17 16:50:02 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 0 ms
+2026-02-17 16:50:03 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 16:50:03 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 16:50:38 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: newadmin, Assigned Role: ADMIN
+2026-02-17 16:50:38 [userService,/] ERROR o.g.usermgmt.resource.AuthController
+                - Invalid credentials: Bad credentials
+2026-02-17 16:51:07 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 16:51:07 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 16:51:07 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:78697af572db483b396310e124fc5af8)
+2026-02-17 16:51:07 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 16:51:07 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 16:51:07 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 16:51:07 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 16:51:07 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 16:51:07 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 16:51:07 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 16:51:07 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 16:51:07 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 16:51:07 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 16:51:07 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 16:51:07 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 16:51:07 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/revenue
+2026-02-17 16:51:07 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/summary
+2026-02-17 16:51:07 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 16:51:07 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kittu123, Assigned Role: ADMIN
+2026-02-17 16:51:07 [userService,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-02-17 16:51:07 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: kittu123 for request: /api/v1/userservice/dashboard/analytics/occupancy-rate
+2026-02-17 16:51:37 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kumar123, Assigned Role: PASSENGER
+2026-02-17 16:51:37 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: kumar123, Assigned Role: PASSENGER
+2026-02-17 16:51:37 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:78697af572db483b396310e124fc5af8)
+2026-02-17 16:51:37 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 16:51:37 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-17 17:07:17 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m2s830ms239µs).
+2026-02-17 17:46:48 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m284ms130µs100ns).
+2026-02-17 17:47:20 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 17:47:20 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 17:47:20 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17 17:47:20 [userService,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-02-17 17:47:20 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 17:47:20 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-02-17 17:47:20 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.

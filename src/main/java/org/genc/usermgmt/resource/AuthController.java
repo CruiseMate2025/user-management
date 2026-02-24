@@ -17,9 +17,11 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping({"/api/v1/userservice"})
@@ -39,7 +41,7 @@ public class AuthController {
     @Value("${server.port}")
     private String serverPort;
 
-   @PostMapping("/login")
+   @PostMapping("/auth/login")
     @Operation(security = {@SecurityRequirement(name = "")})
     public ResponseEntity<Object> login(@RequestBody AuthRequestDTO request , HttpServletRequest servletRequest) {
         try {
@@ -47,12 +49,6 @@ public class AuthController {
                 new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
             );
 
-           /*  --- OPTIMIZATION START: Access authenticated principal ---
-             Retrieve the authenticated object from the SecurityContextHolder.
-             The Principal object contains the UserDetails that was just loaded by the DaoAuthenticationProvider.
-            CustomUserDetails user = (CustomUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-            --- OPTIMIZATION END ---
-            */
             //If  your business requires  additional  Details
            CustomUserDetails user = (CustomUserDetails) userDetailsService.loadUserByUsername(request.getUsername());
             String token = jwtUtil.generateToken(user);
@@ -64,10 +60,10 @@ public class AuthController {
 
 // 2. Pass roleName into the DTO instead of "Admin"
             AuthResponseDTO response = new AuthResponseDTO(
+                    user.getId(),
                     token,
-                    user.getUsername(),
                     user.getFullName(),
-                    roleName, // <--- This replaces the hardcoded "Admin"
+                    roleName,
                     user.getEmail(),
                     user.getPhone(),
                     instanceId + appName

@@ -6,7 +6,6 @@ import org.genc.usermgmt.dto.RoleRequestDTO;
 import org.genc.usermgmt.dto.RoleResponseDTO;
 import org.genc.usermgmt.entity.Role;
 import org.genc.usermgmt.enums.RoleType;
-import org.genc.usermgmt.exception.RecordAlreadyExistsException;
 import org.genc.usermgmt.exception.ResourceNotFoundException;
 import org.genc.usermgmt.repo.RoleRepository;
 import org.genc.usermgmt.service.api.RoleService;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -64,7 +62,7 @@ public class RoleServiceImpl implements RoleService {
     public List<RoleResponseDTO> getAllRoles() {
         return roleRepository.findAll().stream()
                 .map(this::mapToDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 
 

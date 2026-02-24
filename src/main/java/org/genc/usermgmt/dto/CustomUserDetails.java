@@ -87,6 +87,7 @@ import java.util.Set;
 @Getter
 @Setter
 public class CustomUserDetails implements UserDetails {
+    private final Long id;
     private final String username;
     private final String password;
     private final Set<GrantedAuthority> authorities;
@@ -95,7 +96,6 @@ public class CustomUserDetails implements UserDetails {
     private String phone;
 
     public CustomUserDetails(User user) {
-        this.fullName = fullName;
         if (user.getRoles() != null) {
             this.authorities = Collections.singleton(
                     new SimpleGrantedAuthority(user.getRoles().getName().toString())
@@ -108,6 +108,7 @@ public class CustomUserDetails implements UserDetails {
         this.email = user.getEmail();
         this.fullName = user.getFullName();
         this.phone = user.getPhone();
+        this.id = user.getId();
     }
 
     @Override

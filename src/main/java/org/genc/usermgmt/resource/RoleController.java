@@ -25,7 +25,7 @@ public class RoleController {
 
     @PostMapping
     @Operation(summary = "Create new role")
-    public ResponseEntity<?> createRole(
+    public ResponseEntity<Object> createRole(
             @Validated @RequestBody RoleRequestDTO request,
             HttpServletRequest servletRequest) {
         try {
@@ -39,7 +39,7 @@ public class RoleController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Get role by ID")
-    public ResponseEntity<?> getRole(@PathVariable Long id, HttpServletRequest servletRequest) {
+    public ResponseEntity<Object> getRole(@PathVariable Long id, HttpServletRequest servletRequest) {
         try {
             RoleResponseDTO response = roleService.getRoleById(id);
             return ResponseEntity.ok(response);
@@ -57,7 +57,7 @@ public class RoleController {
 
     @PutMapping("/{id}")
     @Operation(summary = "Update role")
-    public ResponseEntity<?> updateRole(
+    public ResponseEntity<Object> updateRole(
             @PathVariable Long id,
             @Validated @RequestBody RoleRequestDTO request,
             HttpServletRequest servletRequest) {
@@ -73,7 +73,7 @@ public class RoleController {
     @DeleteMapping("/{id}")
     @Operation(summary = "Delete role")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public ResponseEntity<?> deleteRole(@PathVariable Long id, HttpServletRequest servletRequest) {
+    public ResponseEntity<Object> deleteRole(@PathVariable Long id, HttpServletRequest servletRequest) {
         try {
             roleService.deleteRole(id);
             return ResponseEntity.noContent().build();
