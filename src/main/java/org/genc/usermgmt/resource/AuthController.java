@@ -1,5 +1,10 @@
 package org.genc.usermgmt.resource;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.genc.usermgmt.dto.AuthRequestDTO;
 import org.genc.usermgmt.dto.AuthResponseDTO;
 import org.genc.usermgmt.dto.CustomUserDetails;
@@ -17,12 +22,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import jakarta.servlet.http.HttpServletRequest;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping({"/api/v1/userservice"})
@@ -57,16 +56,11 @@ public class AuthController {
             String roleName = user.getAuthorities().stream()
                     .map(GrantedAuthority::getAuthority)
                     .findFirst()
-                    .orElse("ROLE_PASSENGER");
+                    .orElse("PASSENGER"); // Default to Passenger if no role is found
 
-            // Strip the "ROLE_" prefix so the frontend gets "ADMIN", "PASSENGER", "CREW"
-            if (roleName.startsWith("ROLE_")) {
-                roleName = roleName.substring(5);
-            }
-
+// 2. Pass roleName into the DTO instead of "Admin"
             AuthResponseDTO response = new AuthResponseDTO(
                     user.getId(),
-                    user.getUsername(),
                     token,
                     user.getFullName(),
                     roleName,

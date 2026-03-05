@@ -1,8 +1,7 @@
 package org.genc.usermgmt.config;
 
 
-import java.util.List;
-
+import lombok.RequiredArgsConstructor;
 import org.genc.usermgmt.filter.JwtAuthenticationFilter;
 import org.genc.usermgmt.security.CustomAccessDeniedHandler;
 import org.genc.usermgmt.security.CustomAuthenticationEntryPoint;
@@ -25,7 +24,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import lombok.RequiredArgsConstructor;
+import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -65,10 +64,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.GET, basePath + "/cruises/**").permitAll()
                         .requestMatchers(HttpMethod.POST, basePath + "/auth/login").permitAll()
-                        .requestMatchers(HttpMethod.POST, basePath + "/register/**").permitAll()
-
-                        // Internal inter-service endpoints (called by PaymentLoyalty via Eureka, no JWT)
-                        .requestMatchers(basePath + "/profile/loyalty/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, basePath + "/register/**").permitAll() // Assuming registration is here
 
                         // Other public service endpoints
                         .requestMatchers("/actuator/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
@@ -76,8 +72,6 @@ public class SecurityConfig {
                         // Restrict access for authenticated requests
                         .requestMatchers(basePath+"/users/**").hasAnyRole("USER", "ADMIN","PASSENGER")
                         .requestMatchers(basePath+"/roles/**").hasRole("ADMIN")
-                        .requestMatchers(basePath+"/profile/**").authenticated()
-                        .requestMatchers(basePath+"/admin/**").hasRole("ADMIN")
 
                         // All other endpoints require authentication
                         .anyRequest().authenticated()
@@ -106,8 +100,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         // Use List.of for immutable, cleaner lists
-        configuration.setAllowedOrigins(List.of("http://localhost:3000",
-                "http://localhost:5173","http://localhost:8093"));
+        configuration.setAllowedOrigins(List.of("http://localhost:3000", "http://localhost:5173"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS","PATCH"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);

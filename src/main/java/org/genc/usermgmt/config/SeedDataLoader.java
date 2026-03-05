@@ -28,11 +28,6 @@ public class SeedDataLoader implements CommandLineRunner {
                 .description("Cruise Passenger")
                 .build());
 
-        roleService.seedRoleData(RoleRequestDTO.builder()
-                .name(RoleType.ADMIN)
-                .description("Adminstrators")
-                .build());
-
 
         if (userMgmtService.isNewUser("admin")) {
             UserRegistrationRequestDTO adminReq = new UserRegistrationRequestDTO(
