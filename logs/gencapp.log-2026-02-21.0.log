@@ -1,0 +1,129 @@
+2026-02-21 01:34:27 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 29272 (C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration\target\classes started by 2464280 in C:\Users\2464280\gencWorkspaces\practiceWorkspace\cruisemate-registration)
+2026-02-21 01:34:27 [userService,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-02-21 01:34:27 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-02-21 01:34:29 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-21 01:34:29 [userService,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 252 ms. Found 2 JPA repository interfaces.
+2026-02-21 01:34:30 [userService,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=7759736f-8948-3048-9a46-45300fe262b9
+2026-02-21 01:34:30 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8086 (http)
+2026-02-21 01:34:31 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-21 01:34:31 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-21 01:34:31 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-21 01:34:31 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 3190 ms
+2026-02-21 01:34:31 [userService,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-21 01:34:31 [userService,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-02-21 01:34:31 [userService,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-02-21 01:34:32 [userService,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-21 01:34:32 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-02-21 01:34:32 [userService,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8636cf4
+2026-02-21 01:34:32 [userService,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-02-21 01:34:32 [userService,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-21 01:34:32 [userService,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-21 01:34:33 [userService,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-21 01:34:33 [userService,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-21 01:34:34 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-21 01:34:34 [userService,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-21 01:34:34 [userService,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-21 01:34:35 [userService,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-02-21 01:34:35 [userService,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-02-21 01:34:35 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8086 (http) with context path '/'
+2026-02-21 01:34:35 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-02-21 01:34:35 [userService,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-02-21 01:34:35 [userService,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-21 01:34:35 [userService,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-02-21 01:34:35 [userService,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 153 ms
+2026-02-21 01:34:35 [userService,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 16 endpoints beneath base path '/actuator'
+2026-02-21 01:34:35 [userService,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-02-21 01:34:35 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 8.806 seconds (process running for 9.621)
+2026-02-21 01:34:36 [userService,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-02-21 01:36:02 [userService,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-21 01:36:02 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-02-21 01:36:02 [userService,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 12 ms
+2026-02-21 01:36:11 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-02-21 01:36:11 [userService,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-02-21 01:36:11 [userService,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from userService on port 8086 (instance: userService:7f93a1dac38e3ffeefb8c8591b554bf5)
+2026-02-21 01:36:21 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/admin/settings/105
+2026-02-21 01:36:21 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-21 01:36:21 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/admin/settings/105
+2026-02-21 01:36:21 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-21 01:36:59 [userService,/] ERROR o.g.u.filter.JwtAuthenticationFilter
+                - Error extracting username from token: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 0
+2026-02-21 01:36:59 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-21 01:58:40 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/admin/settings/105
+2026-02-21 01:58:40 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-21 01:58:40 [userService,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/admin/settings/105
+2026-02-21 01:58:40 [userService,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-02-21 01:58:40 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m38s402ms704µs800ns).
+2026-02-21 02:32:53 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m12s796ms260µs900ns).
+2026-02-21 03:01:42 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m48s539ms321µs800ns).
+2026-02-21 03:19:47 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m5s508ms566µs600ns).
+2026-02-21 03:34:06 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m18s275ms510µs900ns).
+2026-02-21 03:51:20 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m43s926ms245µs200ns).
+2026-02-21 04:06:00 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m6s582ms21µs900ns).
+2026-02-21 04:28:22 [userService,/] WARN  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m22s210ms403µs500ns).
