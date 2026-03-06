@@ -30,8 +30,8 @@ public class User {
     private Integer isActive;
     @Column(name = "version_id")
     private Integer versionId;
-@OneToOne(fetch = FetchType.EAGER)
-@JoinColumn(name = "role_id") // This links users.role_id to roles.id
-private Role roles;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id") // This links users.role_id to roles.id
+    private Role roles;
 
 }

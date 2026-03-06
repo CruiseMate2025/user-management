@@ -6,7 +6,6 @@ import org.genc.usermgmt.dto.AdminUpdateRequestDTO;
 import org.genc.usermgmt.dto.UserRegistrationRequestDTO;
 import org.genc.usermgmt.dto.UserRegistrationResponseDTO;
 import org.genc.usermgmt.entity.User;
-import org.genc.usermgmt.enums.RoleType;
 import org.genc.usermgmt.exception.UserAlreadyExistsException;
 import org.genc.usermgmt.repo.UserRepository;
 import org.genc.usermgmt.service.api.RoleService;
@@ -43,8 +42,7 @@ public class UserMgmtServiceImpl implements UserMgmtService {
             userEntity.setRoles(roleService.getRoleByName(userReqDTO.getRoleType()));
             persUser = userRepository.save(userEntity);
             log.info("Role updated to {} for existing user {}", userReqDTO.getRoleType(), userEntity.getFullName());
-        }
-        else {
+        } else {
             // 3. Fix: Use .role() instead of .roles() in the builder
             User user = User.builder()
                     .username(userReqDTO.getUsername())
@@ -74,37 +72,73 @@ public class UserMgmtServiceImpl implements UserMgmtService {
                 .userMessage(welcomeMessage)
                 .build();
     }
+
     @Override
     public boolean isNewUser(String userName) {
         return userRepository.findByUsername(userName).isEmpty();
     }
 
-    // Inside UserMgmtServiceImpl.java
     @Override
     public UserRegistrationResponseDTO updateUser(Long id, AdminUpdateRequestDTO request) {
         User user = userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
 
         if (request.getFullName() != null) user.setFullName(request.getFullName());
         if (request.getEmail() != null) user.setEmail(request.getEmail());
         if (request.getPhone() != null) user.setPhone(request.getPhone());
         if (request.getUsername() != null) user.setUsername(request.getUsername());
-
         if (request.getPassword() != null && !request.getPassword().isEmpty()) {
             user.setPassword(passwordEncoder.encode(request.getPassword()));
         }
 
-        return mapToResponseDTO(userRepository.save(user));
+        User updatedUser = userRepository.save(user);
+        log.info("User updated successfully: {}", updatedUser.getUsername());
+
+        return UserRegistrationResponseDTO.builder()
+                .id(updatedUser.getId())
+                .username(updatedUser.getUsername())
+                .fullName(updatedUser.getFullName())
+                .email(updatedUser.getEmail())
+                .roles(updatedUser.getRoles().getName())
+                .userMessage("User updated successfully")
+                .build();
     }
 
-    private UserRegistrationResponseDTO mapToResponseDTO(User user) {
-        return UserRegistrationResponseDTO.builder()
-                .id(user.getId())
-                .username(user.getUsername())
-                .email(user.getEmail())
-                .fullName(user.getFullName())
-                .userMessage("Profile settings updated successfully.")
-                .roles(user.getRoles() != null ? user.getRoles().getName() : null)
-                .build();
+    @Override
+    public int getLoyaltyPoints(Long userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + userId));
+        return user.getLoyaltyPoints() != null ? user.getLoyaltyPoints() : 0;
+    }
+
+    @Override
+    @org.springframework.transaction.annotation.Transactional
+    public int addLoyaltyPoints(Long userId, int points) {
+        if (points < 0)
+            throw new IllegalArgumentException("Points to add must be non-negative");
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + userId));
+        int current = user.getLoyaltyPoints() != null ? user.getLoyaltyPoints() : 0;
+        user.setLoyaltyPoints(current + points);
+        userRepository.save(user);
+        log.info("Added {} loyalty points to user {}. New balance: {}", points, userId, user.getLoyaltyPoints());
+        return user.getLoyaltyPoints();
+    }
+
+    @Override
+    @org.springframework.transaction.annotation.Transactional
+    public int redeemLoyaltyPoints(Long userId, int points) {
+        if (points < 0)
+            throw new IllegalArgumentException("Points to redeem must be non-negative");
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + userId));
+        int current = user.getLoyaltyPoints() != null ? user.getLoyaltyPoints() : 0;
+        if (points > current) {
+            throw new RuntimeException("Insufficient loyalty points. Available: " + current + ", Requested: " + points);
+        }
+        user.setLoyaltyPoints(current - points);
+        userRepository.save(user);
+        log.info("Redeemed {} loyalty points from user {}. New balance: {}", points, userId, user.getLoyaltyPoints());
+        return user.getLoyaltyPoints();
     }
 }

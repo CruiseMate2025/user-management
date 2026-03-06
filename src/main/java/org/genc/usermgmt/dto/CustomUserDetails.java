@@ -73,16 +73,17 @@
 
 package org.genc.usermgmt.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Set;
+
 import org.genc.usermgmt.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Set;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -98,7 +99,7 @@ public class CustomUserDetails implements UserDetails {
     public CustomUserDetails(User user) {
         if (user.getRoles() != null) {
             this.authorities = Collections.singleton(
-                    new SimpleGrantedAuthority(user.getRoles().getName().toString())
+                    new SimpleGrantedAuthority("ROLE_" + user.getRoles().getName().toString())
             );
         } else {
             this.authorities = Collections.emptySet();
