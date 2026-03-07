@@ -2,6 +2,7 @@ package org.genc.usermgmt.resource;
 
 import lombok.RequiredArgsConstructor;
 import org.genc.usermgmt.dto.AdminUpdateRequestDTO;
+import org.genc.usermgmt.dto.AdminUpdateResponseDTO;
 import org.genc.usermgmt.dto.UserProfileDTO;
 import org.genc.usermgmt.dto.UserRegistrationResponseDTO;
 import org.genc.usermgmt.entity.User;
@@ -19,21 +20,22 @@ public class AdminController {
     private final UserRepository userRepository;
 
     @GetMapping("/settings/{id}")
-    public ResponseEntity<UserProfileDTO> getAdminSettings(@PathVariable Long id) {
+    public ResponseEntity<AdminUpdateResponseDTO> getAdminSettings(@PathVariable Long id) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
-        UserProfileDTO dto = UserProfileDTO.builder()
+        AdminUpdateResponseDTO dto = AdminUpdateResponseDTO.builder()
                 .id(user.getId())
                 .username(user.getUsername())
                 .fullName(user.getFullName())
                 .email(user.getEmail())
                 .phone(user.getPhone())
+                .description(user.getRoles().getDescription())
                 .build();
         return ResponseEntity.ok(dto);
     }
 
     @PatchMapping("/settings/{id}")
-    public ResponseEntity<UserRegistrationResponseDTO> updateAdminSettings(
+    public ResponseEntity<AdminUpdateResponseDTO> updateAdminSettings(
             @PathVariable Long id,
             @RequestBody AdminUpdateRequestDTO request) {
 

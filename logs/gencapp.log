@@ -1,84 +1,42 @@
-2026-03-06 00:53:38 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h3m54s444ms356µs600ns).
-2026-03-06 00:57:41 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 01:00:37 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m56s251ms221µs200ns).
-2026-03-06 01:06:31 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m54s95ms494µs900ns).
-2026-03-06 01:06:48 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 01:15:53 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m52s241ms954µs600ns).
-2026-03-06 01:16:40 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
-                - Unregistering application USER-SERVICE with eureka with status DOWN
-2026-03-06 01:16:40 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Saw local status change event StatusChangeEvent [timestamp=1772740000788, current=DOWN, previous=UP]
-2026-03-06 01:16:40 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:4932358ab2f2d940e6d08ed9370b94ee: registering service...
-2026-03-06 01:16:40 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:4932358ab2f2d940e6d08ed9370b94ee - registration status: 204
-2026-03-06 01:16:40 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
-                - Commencing graceful shutdown. Waiting for active requests to complete
-2026-03-06 01:16:40 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
-                - Graceful shutdown complete
-2026-03-06 01:16:40 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
-                - Commencing graceful shutdown. Waiting for active requests to complete
-2026-03-06 01:16:40 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
-                - Graceful shutdown complete
-2026-03-06 01:16:41 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
-                - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-06 01:16:41 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
-                - HikariPool-1 - Shutdown initiated...
-2026-03-06 01:16:41 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
-                - HikariPool-1 - Shutdown completed.
-2026-03-06 01:16:41 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Shutting down DiscoveryClient ...
-2026-03-06 01:16:44 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Unregistering ...
-2026-03-06 01:16:44 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:4932358ab2f2d940e6d08ed9370b94ee - deregister  status: 200
-2026-03-06 01:16:44 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Completed shut down of DiscoveryClient
-2026-03-06 01:16:52 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
-                - Starting UserManagementServiceApplication using Java 25 with PID 25976 (C:\cruisemate\cruisemate-registration\cruisemate-registration\target\classes started by 2464280 in C:\cruisemate\cruisemate-registration\cruisemate-registration)
-2026-03-06 01:16:52 [user-Service,/] DEBUG o.g.u.UserManagementServiceApplication
+2026-03-07 13:41:13 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 27436 (C:\cruisemate\cruisemate-registration\cruisemate-registration\target\classes started by 2464280 in C:\cruisemate\cruisemate-registration\cruisemate-registration)
+2026-03-07 13:41:13 [user-Service,/] DEBUG o.g.u.UserManagementServiceApplication
                 - Running with Spring Boot v3.5.6, Spring v6.2.11
-2026-03-06 01:16:52 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+2026-03-07 13:41:13 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
                 - The following 1 profile is active: "genc"
-2026-03-06 01:16:54 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+2026-03-07 13:41:17 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
                 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-06 01:16:54 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
-                - Finished Spring Data repository scanning in 293 ms. Found 2 JPA repository interfaces.
-2026-03-06 01:16:55 [user-Service,/] INFO  o.s.cloud.context.scope.GenericScope
+2026-03-07 13:41:17 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 411 ms. Found 2 JPA repository interfaces.
+2026-03-07 13:41:18 [user-Service,/] INFO  o.s.cloud.context.scope.GenericScope
                 - BeanFactory id=1b5ff9c5-c5c3-30ed-b0bb-5f8cca8ce864
-2026-03-06 01:16:56 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+2026-03-07 13:41:19 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
                 - Tomcat initialized with port 9091 (http)
-2026-03-06 01:16:56 [user-Service,/] INFO  o.a.catalina.core.StandardService
+2026-03-07 13:41:19 [user-Service,/] INFO  o.a.catalina.core.StandardService
                 - Starting service [Tomcat]
-2026-03-06 01:16:56 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
+2026-03-07 13:41:19 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
                 - Starting Servlet engine: [Apache Tomcat/10.1.46]
-2026-03-06 01:16:56 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+2026-03-07 13:41:20 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
                 - Initializing Spring embedded WebApplicationContext
-2026-03-06 01:16:56 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
-                - Root WebApplicationContext: initialization completed in 4096 ms
-2026-03-06 01:16:56 [user-Service,/] INFO  o.h.jpa.internal.util.LogHelper
+2026-03-07 13:41:20 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 6501 ms
+2026-03-07 13:41:20 [user-Service,/] INFO  o.h.jpa.internal.util.LogHelper
                 - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-06 01:16:57 [user-Service,/] INFO  org.hibernate.Version
+2026-03-07 13:41:21 [user-Service,/] INFO  org.hibernate.Version
                 - HHH000412: Hibernate ORM core version 6.6.29.Final
-2026-03-06 01:16:57 [user-Service,/] INFO  o.h.c.i.RegionFactoryInitiator
+2026-03-07 13:41:21 [user-Service,/] INFO  o.h.c.i.RegionFactoryInitiator
                 - HHH000026: Second-level cache disabled
-2026-03-06 01:16:57 [user-Service,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+2026-03-07 13:41:22 [user-Service,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
                 - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-06 01:16:57 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+2026-03-07 13:41:22 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
                 - HikariPool-1 - Starting...
-2026-03-06 01:16:58 [user-Service,/] INFO  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4745bcc6
-2026-03-06 01:16:58 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+2026-03-07 13:41:22 [user-Service,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@520ec7a7
+2026-03-07 13:41:22 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
                 - HikariPool-1 - Start completed.
-2026-03-06 01:16:58 [user-Service,/] WARN  org.hibernate.orm.deprecation
+2026-03-07 13:41:23 [user-Service,/] WARN  org.hibernate.orm.deprecation
                 - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-03-06 01:16:58 [user-Service,/] INFO  o.hibernate.orm.connections.pooling
+2026-03-07 13:41:23 [user-Service,/] INFO  o.hibernate.orm.connections.pooling
                 - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
@@ -87,416 +45,860 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-03-06 01:16:59 [user-Service,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+2026-03-07 13:41:26 [user-Service,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
                 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-06 01:16:59 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+2026-03-07 13:41:26 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
                 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-06 01:17:00 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+2026-03-07 13:41:27 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
                 - Filter 'jwtAuthenticationFilter' configured for use
-2026-03-06 01:17:00 [user-Service,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+2026-03-07 13:41:28 [user-Service,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
                 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-03-06 01:17:01 [user-Service,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+2026-03-07 13:41:28 [user-Service,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
                 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-06 01:17:02 [user-Service,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+2026-03-07 13:41:31 [user-Service,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
                 - Eureka HTTP Client uses RestTemplate.
-2026-03-06 01:17:02 [user-Service,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+2026-03-07 13:41:31 [user-Service,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
                 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-03-06 01:17:02 [user-Service,/] INFO  o.s.c.n.eureka.InstanceInfoFactory
+2026-03-07 13:41:32 [user-Service,/] INFO  o.s.c.n.eureka.InstanceInfoFactory
                 - Setting initial instance status as: STARTING
-2026-03-06 01:17:02 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:32 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Initializing Eureka in region us-east-1
-2026-03-06 01:17:02 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+2026-03-07 13:41:32 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
                 - Resolving eureka endpoints via configuration
-2026-03-06 01:17:02 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:32 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Disable delta property : false
-2026-03-06 01:17:02 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:32 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Single vip registry refresh property : null
-2026-03-06 01:17:02 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:32 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Force full registry fetch : false
-2026-03-06 01:17:02 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:32 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Application is null : false
-2026-03-06 01:17:02 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:32 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Registered Applications size is zero : true
-2026-03-06 01:17:02 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:32 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Application version is -1: true
-2026-03-06 01:17:02 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:32 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Getting all instance registry info from the eureka server
-2026-03-06 01:17:03 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:33 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - The response status is 200
-2026-03-06 01:17:03 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:41:33 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Starting heartbeat executor: renew interval is: 30
-2026-03-06 01:17:03 [user-Service,/] INFO  c.n.discovery.InstanceInfoReplicator
+2026-03-07 13:41:33 [user-Service,/] INFO  c.n.discovery.InstanceInfoReplicator
                 - InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-03-06 01:17:03 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Discovery Client initialized at timestamp 1772740023593 with initial instances count: 5
-2026-03-06 01:17:03 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
+2026-03-07 13:41:33 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Discovery Client initialized at timestamp 1772871093595 with initial instances count: 1
+2026-03-07 13:41:33 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
                 - Registering application USER-SERVICE with eureka with status UP
-2026-03-06 01:17:03 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Saw local status change event StatusChangeEvent [timestamp=1772740023602, current=UP, previous=STARTING]
-2026-03-06 01:17:03 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9676b956ca05f23f18bdf643dbbb048d: registering service...
-2026-03-06 01:17:03 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+2026-03-07 13:41:33 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Saw local status change event StatusChangeEvent [timestamp=1772871093612, current=UP, previous=STARTING]
+2026-03-07 13:41:33 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:86c1554d2c276ae640fd764eaab8970e: registering service...
+2026-03-07 13:41:33 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
                 - Tomcat started on port 9091 (http) with context path '/'
-2026-03-06 01:17:03 [user-Service,/] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration
+2026-03-07 13:41:33 [user-Service,/] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration
                 - Updating port to 9091
-2026-03-06 01:17:03 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9676b956ca05f23f18bdf643dbbb048d - registration status: 204
-2026-03-06 01:17:03 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+2026-03-07 13:41:33 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:86c1554d2c276ae640fd764eaab8970e - registration status: 204
+2026-03-07 13:41:33 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
                 - Tomcat initialized with port 8090 (http)
-2026-03-06 01:17:03 [user-Service,/] INFO  o.a.catalina.core.StandardService
+2026-03-07 13:41:33 [user-Service,/] INFO  o.a.catalina.core.StandardService
                 - Starting service [Tomcat]
-2026-03-06 01:17:03 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
+2026-03-07 13:41:33 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
                 - Starting Servlet engine: [Apache Tomcat/10.1.46]
-2026-03-06 01:17:03 [user-Service,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+2026-03-07 13:41:34 [user-Service,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
                 - Initializing Spring embedded WebApplicationContext
-2026-03-06 01:17:03 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
-                - Root WebApplicationContext: initialization completed in 224 ms
-2026-03-06 01:17:03 [user-Service,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+2026-03-07 13:41:34 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 363 ms
+2026-03-07 13:41:34 [user-Service,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
                 - Exposing 17 endpoints beneath base path '/actuator'
-2026-03-06 01:17:03 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+2026-03-07 13:41:34 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
                 - Tomcat started on port 8090 (http) with context path '/'
-2026-03-06 01:17:04 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
-                - Started UserManagementServiceApplication in 12.81 seconds (process running for 14.162)
-2026-03-06 01:17:04 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+2026-03-07 13:41:34 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 22.937 seconds (process running for 24.576)
+2026-03-07 13:41:35 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
                 - UserManagementServiceApplication booted up and running
-2026-03-06 01:25:32 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m4s239ms868µs900ns).
-2026-03-06 01:27:37 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 01:31:19 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m17s39ms89µs800ns).
-2026-03-06 02:04:10 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
-                - Unregistering application USER-SERVICE with eureka with status DOWN
-2026-03-06 02:04:10 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Saw local status change event StatusChangeEvent [timestamp=1772742850732, current=DOWN, previous=UP]
-2026-03-06 02:04:10 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9676b956ca05f23f18bdf643dbbb048d: registering service...
-2026-03-06 02:04:10 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
-                - Commencing graceful shutdown. Waiting for active requests to complete
-2026-03-06 02:04:10 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9676b956ca05f23f18bdf643dbbb048d - registration status: 204
-2026-03-06 02:04:10 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
-                - Graceful shutdown complete
-2026-03-06 02:04:10 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
-                - Commencing graceful shutdown. Waiting for active requests to complete
-2026-03-06 02:04:10 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
-                - Graceful shutdown complete
-2026-03-06 02:04:10 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
-                - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-06 02:04:10 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
-                - HikariPool-1 - Shutdown initiated...
-2026-03-06 02:04:10 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
-                - HikariPool-1 - Shutdown completed.
-2026-03-06 02:04:10 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Shutting down DiscoveryClient ...
-2026-03-06 02:04:13 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Unregistering ...
-2026-03-06 02:04:13 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9676b956ca05f23f18bdf643dbbb048d - deregister  status: 200
-2026-03-06 02:04:13 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Completed shut down of DiscoveryClient
-2026-03-06 02:04:20 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
-                - Starting UserManagementServiceApplication using Java 25 with PID 19784 (C:\cruisemate\cruisemate-registration\cruisemate-registration\target\classes started by 2464280 in C:\cruisemate\cruisemate-registration\cruisemate-registration)
-2026-03-06 02:04:20 [user-Service,/] DEBUG o.g.u.UserManagementServiceApplication
-                - Running with Spring Boot v3.5.6, Spring v6.2.11
-2026-03-06 02:04:20 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
-                - The following 1 profile is active: "genc"
-2026-03-06 02:04:22 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
-                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-06 02:04:22 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
-                - Finished Spring Data repository scanning in 314 ms. Found 2 JPA repository interfaces.
-2026-03-06 02:04:22 [user-Service,/] INFO  o.s.cloud.context.scope.GenericScope
-                - BeanFactory id=1b5ff9c5-c5c3-30ed-b0bb-5f8cca8ce864
-2026-03-06 02:04:23 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
-                - Tomcat initialized with port 9091 (http)
-2026-03-06 02:04:23 [user-Service,/] INFO  o.a.catalina.core.StandardService
-                - Starting service [Tomcat]
-2026-03-06 02:04:23 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
-                - Starting Servlet engine: [Apache Tomcat/10.1.46]
-2026-03-06 02:04:23 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
-                - Initializing Spring embedded WebApplicationContext
-2026-03-06 02:04:23 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
-                - Root WebApplicationContext: initialization completed in 3833 ms
-2026-03-06 02:04:24 [user-Service,/] INFO  o.h.jpa.internal.util.LogHelper
-                - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-06 02:04:24 [user-Service,/] INFO  org.hibernate.Version
-                - HHH000412: Hibernate ORM core version 6.6.29.Final
-2026-03-06 02:04:24 [user-Service,/] INFO  o.h.c.i.RegionFactoryInitiator
-                - HHH000026: Second-level cache disabled
-2026-03-06 02:04:25 [user-Service,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
-                - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-06 02:04:25 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
-                - HikariPool-1 - Starting...
-2026-03-06 02:04:25 [user-Service,/] INFO  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4745bcc6
-2026-03-06 02:04:25 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
-                - HikariPool-1 - Start completed.
-2026-03-06 02:04:25 [user-Service,/] WARN  org.hibernate.orm.deprecation
-                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-03-06 02:04:25 [user-Service,/] INFO  o.hibernate.orm.connections.pooling
-                - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.44
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-06 02:04:26 [user-Service,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
-                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-06 02:04:27 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
-                - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-06 02:04:27 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
-                - Filter 'jwtAuthenticationFilter' configured for use
-2026-03-06 02:04:28 [user-Service,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
-                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2026-03-06 02:04:28 [user-Service,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
-                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-06 02:04:29 [user-Service,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
-                - Eureka HTTP Client uses RestTemplate.
-2026-03-06 02:04:29 [user-Service,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
-                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-03-06 02:04:30 [user-Service,/] INFO  o.s.c.n.eureka.InstanceInfoFactory
-                - Setting initial instance status as: STARTING
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Initializing Eureka in region us-east-1
-2026-03-06 02:04:30 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Disable delta property : false
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Single vip registry refresh property : null
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Force full registry fetch : false
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Application is null : false
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Registered Applications size is zero : true
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Application version is -1: true
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Getting all instance registry info from the eureka server
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - The response status is 200
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Starting heartbeat executor: renew interval is: 30
-2026-03-06 02:04:30 [user-Service,/] INFO  c.n.discovery.InstanceInfoReplicator
-                - InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Discovery Client initialized at timestamp 1772742870698 with initial instances count: 6
-2026-03-06 02:04:30 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
-                - Registering application USER-SERVICE with eureka with status UP
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Saw local status change event StatusChangeEvent [timestamp=1772742870707, current=UP, previous=STARTING]
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9ef3a0ecb9b0394408eb081838a8ba78: registering service...
-2026-03-06 02:04:30 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
-                - Tomcat started on port 9091 (http) with context path '/'
-2026-03-06 02:04:30 [user-Service,/] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration
-                - Updating port to 9091
-2026-03-06 02:04:30 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9ef3a0ecb9b0394408eb081838a8ba78 - registration status: 204
-2026-03-06 02:04:30 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
-                - Tomcat initialized with port 8090 (http)
-2026-03-06 02:04:30 [user-Service,/] INFO  o.a.catalina.core.StandardService
-                - Starting service [Tomcat]
-2026-03-06 02:04:30 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
-                - Starting Servlet engine: [Apache Tomcat/10.1.46]
-2026-03-06 02:04:31 [user-Service,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
-                - Initializing Spring embedded WebApplicationContext
-2026-03-06 02:04:31 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
-                - Root WebApplicationContext: initialization completed in 246 ms
-2026-03-06 02:04:31 [user-Service,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
-                - Exposing 17 endpoints beneath base path '/actuator'
-2026-03-06 02:04:31 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
-                - Tomcat started on port 8090 (http) with context path '/'
-2026-03-06 02:04:31 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
-                - Started UserManagementServiceApplication in 11.973 seconds (process running for 13.083)
-2026-03-06 02:04:31 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
-                - UserManagementServiceApplication booted up and running
-2026-03-06 02:06:47 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+2026-03-07 13:42:16 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-06 02:06:47 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
+2026-03-07 13:42:16 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
                 - Initializing Servlet 'dispatcherServlet'
-2026-03-06 02:06:47 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
-                - Completed initialization in 17 ms
-2026-03-06 02:06:47 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:06:47 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:06:47 [user-Service,/] INFO  o.g.usermgmt.resource.AuthController
-                - Access from user-Service on port 9091 (instance: user-Service:da5ab3e788f7f077761f2b22f5ab90dc)
-2026-03-06 02:08:50 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:08:50 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+2026-03-07 13:42:16 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 0 ms
+2026-03-07 13:42:17 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 13:42:17 [user-Service,/] ERROR o.g.usermgmt.resource.AuthController
+                - Invalid credentials: Bad credentials
+2026-03-07 13:42:27 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 13:42:27 [user-Service,/] ERROR o.g.usermgmt.resource.AuthController
+                - Invalid credentials: Bad credentials
+2026-03-07 13:42:33 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 13:42:33 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 13:42:33 [user-Service,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from user-Service on port 9091 (instance: user-Service:b08bb154be4264d13a699438d41310da)
+2026-03-07 13:42:38 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 13:42:38 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
                 - isTokenExpired false 
-2026-03-06 02:08:50 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
-                - Authenticated user: sheshank123 for request: /api/v1/userservice/users/3
-2026-03-06 02:08:50 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:08:50 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+2026-03-07 13:42:38 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 13:42:38 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 13:42:38 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
                 - isTokenExpired false 
-2026-03-06 02:08:50 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
-                - Authenticated user: sheshank123 for request: /api/v1/userservice/users/3
-2026-03-06 02:09:30 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 02:11:38 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:11:38 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+2026-03-07 13:42:38 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 13:43:53 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 13:43:53 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
                 - isTokenExpired false 
-2026-03-06 02:11:38 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
-                - Authenticated user: sheshank123 for request: /api/v1/userservice/users/3
-2026-03-06 02:11:38 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
-                - User updated successfully: sheshank123
-2026-03-06 02:11:38 [user-Service,/] INFO  o.g.usermgmt.resource.UserController
-                - User 3 updated successfully
-2026-03-06 02:11:57 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:11:57 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+2026-03-07 13:43:53 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 13:43:53 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 13:43:53 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
                 - isTokenExpired false 
-2026-03-06 02:11:57 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
-                - Authenticated user: sheshank123 for request: /api/v1/userservice/users/3
-2026-03-06 02:11:57 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
-                - User updated successfully: sheshank123
-2026-03-06 02:11:57 [user-Service,/] INFO  o.g.usermgmt.resource.UserController
-                - User 3 updated successfully
-2026-03-06 02:12:05 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:12:05 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
-                - isTokenExpired false 
-2026-03-06 02:12:05 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
-                - Authenticated user: sheshank123 for request: /api/v1/userservice/users/3
-2026-03-06 02:12:05 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
-                - User updated successfully: sheshank123
-2026-03-06 02:12:05 [user-Service,/] INFO  o.g.usermgmt.resource.UserController
-                - User 3 updated successfully
-2026-03-06 02:14:30 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+2026-03-07 13:43:53 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 13:46:32 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
                 - Resolving eureka endpoints via configuration
-2026-03-06 02:19:30 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+2026-03-07 13:51:32 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
                 - Resolving eureka endpoints via configuration
-2026-03-06 02:40:33 [user-Service,/] ERROR o.g.u.filter.JwtAuthenticationFilter
-                - Error extracting username from token: JWT expired 1126121 milliseconds ago at 2026-03-05T20:51:47.000Z. Current time: 2026-03-05T21:10:33.121Z. Allowed clock skew: 0 milliseconds.
-2026-03-06 02:40:33 [user-Service,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
-                - Authentication failure: Full authentication is required to access this resource 
-2026-03-06 02:40:33 [user-Service,/] ERROR o.g.u.filter.JwtAuthenticationFilter
-                - Error extracting username from token: JWT expired 1126168 milliseconds ago at 2026-03-05T20:51:47.000Z. Current time: 2026-03-05T21:10:33.168Z. Allowed clock skew: 0 milliseconds.
-2026-03-06 02:40:33 [user-Service,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
-                - Authentication failure: Full authentication is required to access this resource 
-2026-03-06 02:40:33 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m38s169ms820µs800ns).
-2026-03-06 02:40:48 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:40:48 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:40:48 [user-Service,/] INFO  o.g.usermgmt.resource.AuthController
-                - Access from user-Service on port 9091 (instance: user-Service:da5ab3e788f7f077761f2b22f5ab90dc)
-2026-03-06 02:40:54 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:40:54 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
-                - isTokenExpired false 
-2026-03-06 02:40:54 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
-                - Authenticated user: sheshank123 for request: /api/v1/userservice/users/3
-2026-03-06 02:40:54 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
-                - User found: sheshank123, Assigned Role: PASSENGER
-2026-03-06 02:40:54 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
-                - isTokenExpired false 
-2026-03-06 02:40:54 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
-                - Authenticated user: sheshank123 for request: /api/v1/userservice/users/3
-2026-03-06 02:41:38 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+2026-03-07 13:56:32 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
                 - Resolving eureka endpoints via configuration
-2026-03-06 02:46:38 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 02:51:38 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 02:56:38 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:01:38 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:06:38 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:13:28 [user-Service,/] ERROR o.g.u.filter.JwtAuthenticationFilter
-                - Error extracting username from token: JWT expired 1060597 milliseconds ago at 2026-03-05T21:25:48.000Z. Current time: 2026-03-05T21:43:28.597Z. Allowed clock skew: 0 milliseconds.
-2026-03-06 03:13:28 [user-Service,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
-                - Authentication failure: Full authentication is required to access this resource 
-2026-03-06 03:13:28 [user-Service,/] ERROR o.g.u.filter.JwtAuthenticationFilter
-                - Error extracting username from token: JWT expired 1060628 milliseconds ago at 2026-03-05T21:25:48.000Z. Current time: 2026-03-05T21:43:28.628Z. Allowed clock skew: 0 milliseconds.
-2026-03-06 03:13:28 [user-Service,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
-                - Authentication failure: Full authentication is required to access this resource 
-2026-03-06 03:13:49 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m45s230ms841µs800ns).
-2026-03-06 03:17:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:22:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:27:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:32:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:37:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:42:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:47:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:52:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 03:57:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 04:02:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 04:07:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 04:12:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 04:17:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 04:22:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 04:27:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 04:32:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 04:37:55 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 04:58:21 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m31s16ms403µs200ns).
-2026-03-06 09:34:12 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h35m50s221ms147µs200ns).
-2026-03-06 09:37:26 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 09:42:49 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m37s598ms459µs900ns).
-2026-03-06 09:45:46 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
-                - Resolving eureka endpoints via configuration
-2026-03-06 10:41:19 [user-Service,/] WARN  com.zaxxer.hikari.pool.HikariPool
-                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m48s78ms897µs).
-2026-03-06 10:42:11 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
+2026-03-07 13:59:58 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
                 - Unregistering application USER-SERVICE with eureka with status DOWN
-2026-03-06 10:42:11 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - Saw local status change event StatusChangeEvent [timestamp=1772773931421, current=DOWN, previous=UP]
-2026-03-06 10:42:11 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9ef3a0ecb9b0394408eb081838a8ba78: registering service...
-2026-03-06 10:42:11 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9ef3a0ecb9b0394408eb081838a8ba78 - registration status: 204
-2026-03-06 10:42:11 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+2026-03-07 13:59:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Saw local status change event StatusChangeEvent [timestamp=1772872198169, current=DOWN, previous=UP]
+2026-03-07 13:59:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:86c1554d2c276ae640fd764eaab8970e: registering service...
+2026-03-07 13:59:58 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
                 - Commencing graceful shutdown. Waiting for active requests to complete
-2026-03-06 10:42:11 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+2026-03-07 13:59:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:86c1554d2c276ae640fd764eaab8970e - registration status: 204
+2026-03-07 13:59:58 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
                 - Graceful shutdown complete
-2026-03-06 10:42:11 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+2026-03-07 13:59:58 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
                 - Commencing graceful shutdown. Waiting for active requests to complete
-2026-03-06 10:42:11 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+2026-03-07 13:59:58 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
                 - Graceful shutdown complete
-2026-03-06 10:42:11 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+2026-03-07 13:59:58 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
                 - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-06 10:42:11 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+2026-03-07 13:59:58 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
                 - HikariPool-1 - Shutdown initiated...
-2026-03-06 10:42:11 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+2026-03-07 13:59:58 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
                 - HikariPool-1 - Shutdown completed.
-2026-03-06 10:42:11 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 13:59:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Shutting down DiscoveryClient ...
-2026-03-06 10:42:14 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 14:00:01 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Unregistering ...
-2026-03-06 10:42:15 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
-                - DiscoveryClient_USER-SERVICE/user-Service:9ef3a0ecb9b0394408eb081838a8ba78 - deregister  status: 200
-2026-03-06 10:42:15 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+2026-03-07 14:00:01 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:86c1554d2c276ae640fd764eaab8970e - deregister  status: 200
+2026-03-07 14:00:01 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Completed shut down of DiscoveryClient
+2026-03-07 14:01:17 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 27784 (C:\cruisemate\cruisemate-registration\cruisemate-registration\target\classes started by 2464280 in C:\cruisemate\cruisemate-registration\cruisemate-registration)
+2026-03-07 14:01:17 [user-Service,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-03-07 14:01:17 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-03-07 14:01:18 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-07 14:01:18 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 154 ms. Found 2 JPA repository interfaces.
+2026-03-07 14:01:18 [user-Service,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=1b5ff9c5-c5c3-30ed-b0bb-5f8cca8ce864
+2026-03-07 14:01:19 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 9091 (http)
+2026-03-07 14:01:19 [user-Service,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-03-07 14:01:19 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-03-07 14:01:19 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-03-07 14:01:19 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 2388 ms
+2026-03-07 14:01:19 [user-Service,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-07 14:01:19 [user-Service,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-03-07 14:01:19 [user-Service,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-03-07 14:01:20 [user-Service,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-07 14:01:20 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-03-07 14:01:20 [user-Service,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ba08f26
+2026-03-07 14:01:20 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-03-07 14:01:20 [user-Service,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-07 14:01:20 [user-Service,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-07 14:01:21 [user-Service,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-07 14:01:21 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07 14:01:21 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-07 14:01:22 [user-Service,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-03-07 14:01:22 [user-Service,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-07 14:01:23 [user-Service,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-03-07 14:01:23 [user-Service,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-07 14:01:23 [user-Service,/] INFO  o.s.c.n.eureka.InstanceInfoFactory
+                - Setting initial instance status as: STARTING
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Initializing Eureka in region us-east-1
+2026-03-07 14:01:23 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+                - Resolving eureka endpoints via configuration
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Disable delta property : false
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Single vip registry refresh property : null
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Force full registry fetch : false
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Application is null : false
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Registered Applications size is zero : true
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Application version is -1: true
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Getting all instance registry info from the eureka server
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - The response status is 200
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Starting heartbeat executor: renew interval is: 30
+2026-03-07 14:01:23 [user-Service,/] INFO  c.n.discovery.InstanceInfoReplicator
+                - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Discovery Client initialized at timestamp 1772872283614 with initial instances count: 5
+2026-03-07 14:01:23 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
+                - Registering application USER-SERVICE with eureka with status UP
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Saw local status change event StatusChangeEvent [timestamp=1772872283619, current=UP, previous=STARTING]
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:7a7597569c657b45b81bb07dfe25ec51: registering service...
+2026-03-07 14:01:23 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 9091 (http) with context path '/'
+2026-03-07 14:01:23 [user-Service,/] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration
+                - Updating port to 9091
+2026-03-07 14:01:23 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:7a7597569c657b45b81bb07dfe25ec51 - registration status: 204
+2026-03-07 14:01:23 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-03-07 14:01:23 [user-Service,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-03-07 14:01:23 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-03-07 14:01:23 [user-Service,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-03-07 14:01:23 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 134 ms
+2026-03-07 14:01:23 [user-Service,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 17 endpoints beneath base path '/actuator'
+2026-03-07 14:01:23 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-03-07 14:01:23 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 7.339 seconds (process running for 8.178)
+2026-03-07 14:01:24 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-03-07 14:01:53 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-07 14:01:53 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-03-07 14:01:53 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 0 ms
+2026-03-07 14:01:53 [user-Service,/] ERROR o.g.u.filter.JwtAuthenticationFilter
+                - Error extracting username from token: JWT expired 260197 milliseconds ago at 2026-03-07T08:27:33.000Z. Current time: 2026-03-07T08:31:53.197Z. Allowed clock skew: 0 milliseconds.
+2026-03-07 14:01:53 [user-Service,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-03-07 14:01:59 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:01:59 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:01:59 [user-Service,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from user-Service on port 9091 (instance: user-Service:00fb3b3d24bdd066a2b34fb38972b881)
+2026-03-07 14:02:06 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:02:06 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:02:06 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:02:06 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:02:06 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:02:06 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:02:28 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:02:28 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:02:28 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:02:28 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
+                - User updated successfully: admin
+2026-03-07 14:02:34 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - No Authorization header or invalid format for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:02:34 [user-Service,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-03-07 14:06:23 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+                - Resolving eureka endpoints via configuration
+2026-03-07 14:07:05 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
+                - Unregistering application USER-SERVICE with eureka with status DOWN
+2026-03-07 14:07:05 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Saw local status change event StatusChangeEvent [timestamp=1772872625147, current=DOWN, previous=UP]
+2026-03-07 14:07:05 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:7a7597569c657b45b81bb07dfe25ec51: registering service...
+2026-03-07 14:07:05 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-07 14:07:05 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:7a7597569c657b45b81bb07dfe25ec51 - registration status: 204
+2026-03-07 14:07:05 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-03-07 14:07:05 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-07 14:07:05 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-03-07 14:07:05 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07 14:07:05 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-03-07 14:07:05 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-03-07 14:07:05 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Shutting down DiscoveryClient ...
+2026-03-07 14:07:08 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Unregistering ...
+2026-03-07 14:07:08 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:7a7597569c657b45b81bb07dfe25ec51 - deregister  status: 200
+2026-03-07 14:07:08 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Completed shut down of DiscoveryClient
+2026-03-07 14:07:13 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 33384 (C:\cruisemate\cruisemate-registration\cruisemate-registration\target\classes started by 2464280 in C:\cruisemate\cruisemate-registration\cruisemate-registration)
+2026-03-07 14:07:13 [user-Service,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-03-07 14:07:13 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-03-07 14:07:14 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-07 14:07:15 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 177 ms. Found 2 JPA repository interfaces.
+2026-03-07 14:07:15 [user-Service,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=1b5ff9c5-c5c3-30ed-b0bb-5f8cca8ce864
+2026-03-07 14:07:15 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 9091 (http)
+2026-03-07 14:07:15 [user-Service,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-03-07 14:07:15 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-03-07 14:07:16 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-03-07 14:07:16 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 2462 ms
+2026-03-07 14:07:16 [user-Service,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-07 14:07:16 [user-Service,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-03-07 14:07:16 [user-Service,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-03-07 14:07:16 [user-Service,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-07 14:07:16 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-03-07 14:07:16 [user-Service,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f575d2b
+2026-03-07 14:07:16 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-03-07 14:07:17 [user-Service,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-07 14:07:17 [user-Service,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-07 14:07:17 [user-Service,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-07 14:07:18 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07 14:07:18 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-07 14:07:18 [user-Service,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-03-07 14:07:18 [user-Service,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-07 14:07:19 [user-Service,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-03-07 14:07:19 [user-Service,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-07 14:07:19 [user-Service,/] INFO  o.s.c.n.eureka.InstanceInfoFactory
+                - Setting initial instance status as: STARTING
+2026-03-07 14:07:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Initializing Eureka in region us-east-1
+2026-03-07 14:07:19 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+                - Resolving eureka endpoints via configuration
+2026-03-07 14:07:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Disable delta property : false
+2026-03-07 14:07:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Single vip registry refresh property : null
+2026-03-07 14:07:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Force full registry fetch : false
+2026-03-07 14:07:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Application is null : false
+2026-03-07 14:07:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Registered Applications size is zero : true
+2026-03-07 14:07:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Application version is -1: true
+2026-03-07 14:07:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Getting all instance registry info from the eureka server
+2026-03-07 14:07:20 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - The response status is 200
+2026-03-07 14:07:20 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Starting heartbeat executor: renew interval is: 30
+2026-03-07 14:07:20 [user-Service,/] INFO  c.n.discovery.InstanceInfoReplicator
+                - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-07 14:07:20 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Discovery Client initialized at timestamp 1772872640045 with initial instances count: 6
+2026-03-07 14:07:20 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
+                - Registering application USER-SERVICE with eureka with status UP
+2026-03-07 14:07:20 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Saw local status change event StatusChangeEvent [timestamp=1772872640050, current=UP, previous=STARTING]
+2026-03-07 14:07:20 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:e4c20065c96886f099756e655df61a2d: registering service...
+2026-03-07 14:07:20 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 9091 (http) with context path '/'
+2026-03-07 14:07:20 [user-Service,/] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration
+                - Updating port to 9091
+2026-03-07 14:07:20 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:e4c20065c96886f099756e655df61a2d - registration status: 204
+2026-03-07 14:07:20 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-03-07 14:07:20 [user-Service,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-03-07 14:07:20 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-03-07 14:07:20 [user-Service,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-03-07 14:07:20 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 120 ms
+2026-03-07 14:07:20 [user-Service,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 17 endpoints beneath base path '/actuator'
+2026-03-07 14:07:20 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-03-07 14:07:20 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 7.395 seconds (process running for 8.216)
+2026-03-07 14:07:20 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-03-07 14:07:36 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-07 14:07:36 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-03-07 14:07:36 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 2 ms
+2026-03-07 14:07:37 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:07:37 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:07:37 [user-Service,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from user-Service on port 9091 (instance: user-Service:fd0eebdcb8803c44b110f46cb72a27c1)
+2026-03-07 14:07:59 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:07:59 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:07:59 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:07:59 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:07:59 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:07:59 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:08:15 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:08:15 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:08:15 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:08:15 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
+                - User updated successfully: admin
+2026-03-07 14:09:15 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:09:15 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:09:15 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:09:15 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:09:15 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:09:15 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:09:24 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:09:24 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:09:24 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:09:24 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
+                - User updated successfully: admin
+2026-03-07 14:09:48 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:09:48 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:09:48 [user-Service,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from user-Service on port 9091 (instance: user-Service:fd0eebdcb8803c44b110f46cb72a27c1)
+2026-03-07 14:09:52 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:09:52 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:09:52 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:09:52 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:09:52 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:09:52 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:10:03 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:10:03 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:10:03 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:10:03 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
+                - User updated successfully: admin
+2026-03-07 14:12:19 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+                - Resolving eureka endpoints via configuration
+2026-03-07 14:15:44 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
+                - Unregistering application USER-SERVICE with eureka with status DOWN
+2026-03-07 14:15:44 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Saw local status change event StatusChangeEvent [timestamp=1772873144567, current=DOWN, previous=UP]
+2026-03-07 14:15:44 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:e4c20065c96886f099756e655df61a2d: registering service...
+2026-03-07 14:15:44 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-07 14:15:44 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:e4c20065c96886f099756e655df61a2d - registration status: 204
+2026-03-07 14:15:44 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-03-07 14:15:44 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-07 14:15:44 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-03-07 14:15:44 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07 14:15:44 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-03-07 14:15:44 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-03-07 14:15:44 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Shutting down DiscoveryClient ...
+2026-03-07 14:15:47 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Unregistering ...
+2026-03-07 14:15:47 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:e4c20065c96886f099756e655df61a2d - deregister  status: 200
+2026-03-07 14:15:47 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Completed shut down of DiscoveryClient
+2026-03-07 14:15:52 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - Starting UserManagementServiceApplication using Java 25 with PID 21756 (C:\cruisemate\cruisemate-registration\cruisemate-registration\target\classes started by 2464280 in C:\cruisemate\cruisemate-registration\cruisemate-registration)
+2026-03-07 14:15:52 [user-Service,/] DEBUG o.g.u.UserManagementServiceApplication
+                - Running with Spring Boot v3.5.6, Spring v6.2.11
+2026-03-07 14:15:52 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - The following 1 profile is active: "genc"
+2026-03-07 14:15:53 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-07 14:15:53 [user-Service,/] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 155 ms. Found 2 JPA repository interfaces.
+2026-03-07 14:15:53 [user-Service,/] INFO  o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=1b5ff9c5-c5c3-30ed-b0bb-5f8cca8ce864
+2026-03-07 14:15:54 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 9091 (http)
+2026-03-07 14:15:54 [user-Service,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-03-07 14:15:54 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-03-07 14:15:54 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-03-07 14:15:54 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 2172 ms
+2026-03-07 14:15:54 [user-Service,/] INFO  o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-07 14:15:54 [user-Service,/] INFO  org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-03-07 14:15:54 [user-Service,/] INFO  o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-03-07 14:15:55 [user-Service,/] INFO  o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-07 14:15:55 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-03-07 14:15:55 [user-Service,/] INFO  com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2634d000
+2026-03-07 14:15:55 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-03-07 14:15:55 [user-Service,/] WARN  org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-07 14:15:55 [user-Service,/] INFO  o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-07 14:15:56 [user-Service,/] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-07 14:15:56 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07 14:15:56 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-07 14:15:56 [user-Service,/] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-03-07 14:15:56 [user-Service,/] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-07 14:15:57 [user-Service,/] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-03-07 14:15:57 [user-Service,/] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-03-07 14:15:57 [user-Service,/] INFO  o.s.c.n.eureka.InstanceInfoFactory
+                - Setting initial instance status as: STARTING
+2026-03-07 14:15:57 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Initializing Eureka in region us-east-1
+2026-03-07 14:15:57 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+                - Resolving eureka endpoints via configuration
+2026-03-07 14:15:57 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Disable delta property : false
+2026-03-07 14:15:57 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Single vip registry refresh property : null
+2026-03-07 14:15:57 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Force full registry fetch : false
+2026-03-07 14:15:57 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Application is null : false
+2026-03-07 14:15:57 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Registered Applications size is zero : true
+2026-03-07 14:15:57 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Application version is -1: true
+2026-03-07 14:15:57 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Getting all instance registry info from the eureka server
+2026-03-07 14:15:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - The response status is 200
+2026-03-07 14:15:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Starting heartbeat executor: renew interval is: 30
+2026-03-07 14:15:58 [user-Service,/] INFO  c.n.discovery.InstanceInfoReplicator
+                - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-03-07 14:15:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Discovery Client initialized at timestamp 1772873158185 with initial instances count: 6
+2026-03-07 14:15:58 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
+                - Registering application USER-SERVICE with eureka with status UP
+2026-03-07 14:15:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Saw local status change event StatusChangeEvent [timestamp=1772873158193, current=UP, previous=STARTING]
+2026-03-07 14:15:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:4aacd00e8066ebb9b1c9a1a3f3d890da: registering service...
+2026-03-07 14:15:58 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 9091 (http) with context path '/'
+2026-03-07 14:15:58 [user-Service,/] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration
+                - Updating port to 9091
+2026-03-07 14:15:58 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:4aacd00e8066ebb9b1c9a1a3f3d890da - registration status: 204
+2026-03-07 14:15:58 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8090 (http)
+2026-03-07 14:15:58 [user-Service,/] INFO  o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-03-07 14:15:58 [user-Service,/] INFO  o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-03-07 14:15:58 [user-Service,/] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/]
+                - Initializing Spring embedded WebApplicationContext
+2026-03-07 14:15:58 [user-Service,/] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                - Root WebApplicationContext: initialization completed in 157 ms
+2026-03-07 14:15:58 [user-Service,/] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                - Exposing 17 endpoints beneath base path '/actuator'
+2026-03-07 14:15:58 [user-Service,/] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                - Tomcat started on port 8090 (http) with context path '/'
+2026-03-07 14:15:58 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - Started UserManagementServiceApplication in 6.718 seconds (process running for 7.393)
+2026-03-07 14:15:58 [user-Service,/] INFO  o.g.u.UserManagementServiceApplication
+                - UserManagementServiceApplication booted up and running
+2026-03-07 14:19:40 [user-Service,/] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-07 14:19:40 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-03-07 14:19:40 [user-Service,/] INFO  o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 2 ms
+2026-03-07 14:19:40 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:19:40 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:19:40 [user-Service,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from user-Service on port 9091 (instance: user-Service:99e2a31c24108829c036d7515d015115)
+2026-03-07 14:19:43 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:19:43 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:19:43 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:19:43 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:19:43 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:19:43 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:19:56 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:19:56 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:19:56 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:19:56 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
+                - User updated successfully: admin
+2026-03-07 14:20:57 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+                - Resolving eureka endpoints via configuration
+2026-03-07 14:25:57 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+                - Resolving eureka endpoints via configuration
+2026-03-07 14:27:38 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:27:38 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:27:38 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:27:48 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:27:48 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:27:48 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:27:48 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:27:48 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:27:48 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:27:54 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:27:54 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:27:54 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:29:50 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:29:50 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:29:50 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:29:53 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:29:53 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:29:53 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:29:53 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:29:53 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:29:53 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:30:57 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+                - Resolving eureka endpoints via configuration
+2026-03-07 14:32:18 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:32:18 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:32:18 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:32:18 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:32:18 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:32:18 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:34:13 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:34:13 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:34:13 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:34:13 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
+                - User updated successfully: admin
+2026-03-07 14:34:19 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:34:19 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:34:19 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:34:19 [user-Service,/] INFO  o.g.u.s.impl.UserMgmtServiceImpl
+                - User updated successfully: admin
+2026-03-07 14:35:57 [user-Service,/] INFO  c.n.d.s.r.aws.ConfigClusterResolver
+                - Resolving eureka endpoints via configuration
+2026-03-07 14:36:31 [user-Service,/] ERROR o.g.u.filter.JwtAuthenticationFilter
+                - Error extracting username from token: JWT expired 111366 milliseconds ago at 2026-03-07T09:04:40.000Z. Current time: 2026-03-07T09:06:31.366Z. Allowed clock skew: 0 milliseconds.
+2026-03-07 14:36:31 [user-Service,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-03-07 14:36:31 [user-Service,/] ERROR o.g.u.filter.JwtAuthenticationFilter
+                - Error extracting username from token: JWT expired 111422 milliseconds ago at 2026-03-07T09:04:40.000Z. Current time: 2026-03-07T09:06:31.422Z. Allowed clock skew: 0 milliseconds.
+2026-03-07 14:36:31 [user-Service,/] ERROR o.g.u.s.CustomAuthenticationEntryPoint
+                - Authentication failure: Full authentication is required to access this resource 
+2026-03-07 14:36:34 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:36:34 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:36:34 [user-Service,/] INFO  o.g.usermgmt.resource.AuthController
+                - Access from user-Service on port 9091 (instance: user-Service:99e2a31c24108829c036d7515d015115)
+2026-03-07 14:36:37 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:36:37 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:36:37 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:36:37 [user-Service,/] INFO  o.g.u.s.i.CustomUserDetailsService
+                - User found: admin, Assigned Role: ADMIN
+2026-03-07 14:36:37 [user-Service,/] INFO  org.genc.usermgmt.util.JwtUtil
+                - isTokenExpired false 
+2026-03-07 14:36:37 [user-Service,/] DEBUG o.g.u.filter.JwtAuthenticationFilter
+                - Authenticated user: admin for request: /api/v1/userservice/admin/settings/1
+2026-03-07 14:40:16 [user-Service,/] INFO  o.s.c.n.e.s.EurekaServiceRegistry
+                - Unregistering application USER-SERVICE with eureka with status DOWN
+2026-03-07 14:40:16 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Saw local status change event StatusChangeEvent [timestamp=1772874616248, current=DOWN, previous=UP]
+2026-03-07 14:40:16 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:4aacd00e8066ebb9b1c9a1a3f3d890da: registering service...
+2026-03-07 14:40:16 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-07 14:40:16 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:4aacd00e8066ebb9b1c9a1a3f3d890da - registration status: 204
+2026-03-07 14:40:16 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-03-07 14:40:16 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-07 14:40:16 [user-Service,/] INFO  o.s.b.w.e.tomcat.GracefulShutdown
+                - Graceful shutdown complete
+2026-03-07 14:40:16 [user-Service,/] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07 14:40:16 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-03-07 14:40:16 [user-Service,/] INFO  com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-03-07 14:40:16 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Shutting down DiscoveryClient ...
+2026-03-07 14:40:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - Unregistering ...
+2026-03-07 14:40:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
+                - DiscoveryClient_USER-SERVICE/user-Service:4aacd00e8066ebb9b1c9a1a3f3d890da - deregister  status: 200
+2026-03-07 14:40:19 [user-Service,/] INFO  c.netflix.discovery.DiscoveryClient
                 - Completed shut down of DiscoveryClient

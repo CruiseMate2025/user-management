@@ -19,4 +19,5 @@ public class UserProfileDTO {
     private Integer loyaltyPoints;
     private String role;
     private String status; // "Active" or "Inactive"
+    private String password;
 }

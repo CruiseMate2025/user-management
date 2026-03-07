@@ -2,17 +2,18 @@ package org.genc.usermgmt.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.genc.usermgmt.dto.AdminUpdateRequestDTO;
-import org.genc.usermgmt.dto.UserRegistrationRequestDTO;
-import org.genc.usermgmt.dto.UserRegistrationResponseDTO;
+import org.genc.usermgmt.dto.*;
+import org.genc.usermgmt.entity.Role;
 import org.genc.usermgmt.entity.User;
 import org.genc.usermgmt.exception.UserAlreadyExistsException;
+import org.genc.usermgmt.repo.RoleRepository;
 import org.genc.usermgmt.repo.UserRepository;
 import org.genc.usermgmt.service.api.RoleService;
 import org.genc.usermgmt.service.api.UserMgmtService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.sql.SQLOutput;
 import java.util.Optional;
 
 @Service
@@ -79,10 +80,9 @@ public class UserMgmtServiceImpl implements UserMgmtService {
     }
 
     @Override
-    public UserRegistrationResponseDTO updateUser(Long id, AdminUpdateRequestDTO request) {
+    public AdminUpdateResponseDTO updateUser(Long id, AdminUpdateRequestDTO request) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
-
         if (request.getFullName() != null) user.setFullName(request.getFullName());
         if (request.getEmail() != null) user.setEmail(request.getEmail());
         if (request.getPhone() != null) user.setPhone(request.getPhone());
@@ -90,17 +90,17 @@ public class UserMgmtServiceImpl implements UserMgmtService {
         if (request.getPassword() != null && !request.getPassword().isEmpty()) {
             user.setPassword(passwordEncoder.encode(request.getPassword()));
         }
-
         User updatedUser = userRepository.save(user);
         log.info("User updated successfully: {}", updatedUser.getUsername());
 
-        return UserRegistrationResponseDTO.builder()
+        return AdminUpdateResponseDTO.builder()
                 .id(updatedUser.getId())
                 .username(updatedUser.getUsername())
                 .fullName(updatedUser.getFullName())
                 .email(updatedUser.getEmail())
                 .roles(updatedUser.getRoles().getName())
                 .userMessage("User updated successfully")
+                .description(updatedUser.getRoles().getDescription())
                 .build();
     }
 
