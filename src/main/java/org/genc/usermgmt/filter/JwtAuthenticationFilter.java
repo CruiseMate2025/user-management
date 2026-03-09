@@ -5,12 +5,10 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.genc.usermgmt.dto.CustomUserDetails;
 import org.genc.usermgmt.service.impl.CustomUserDetailsService;
 import org.genc.usermgmt.util.JwtUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -23,15 +21,15 @@ import java.util.List;
 
 @Component
 @Slf4j
-@RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    @Autowired
     private final JwtUtil jwtUtil;
-    @Autowired
     private final CustomUserDetailsService userDetailsService;
 
-
+    public JwtAuthenticationFilter(JwtUtil jwtUtil, CustomUserDetailsService userDetailsService) {
+        this.jwtUtil = jwtUtil;
+        this.userDetailsService = userDetailsService;
+    }
     // all paths that should NOT be filtered (i.e., public paths)
     // BASE_SERVICE_PATH should be accessible or hardcoded here if needed
     private static final List<String> SKIPPED_PATHS = List.of(

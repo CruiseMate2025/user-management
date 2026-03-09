@@ -2,18 +2,19 @@ package org.genc.usermgmt.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.genc.usermgmt.dto.*;
-import org.genc.usermgmt.entity.Role;
+import org.genc.usermgmt.dto.AdminUpdateRequestDTO;
+import org.genc.usermgmt.dto.AdminUpdateResponseDTO;
+import org.genc.usermgmt.dto.UserRegistrationRequestDTO;
+import org.genc.usermgmt.dto.UserRegistrationResponseDTO;
 import org.genc.usermgmt.entity.User;
 import org.genc.usermgmt.exception.UserAlreadyExistsException;
-import org.genc.usermgmt.repo.RoleRepository;
+import org.genc.usermgmt.exception.UserNotFoundException;
 import org.genc.usermgmt.repo.UserRepository;
 import org.genc.usermgmt.service.api.RoleService;
 import org.genc.usermgmt.service.api.UserMgmtService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.sql.SQLOutput;
 import java.util.Optional;
 
 @Service
@@ -24,6 +25,7 @@ public class UserMgmtServiceImpl implements UserMgmtService {
     private final UserRepository userRepository;
     private final RoleService roleService;
     private final PasswordEncoder passwordEncoder;
+    String unf = "User not found with id: ";
 
     @Override
     public UserRegistrationResponseDTO registerNewUser(UserRegistrationRequestDTO userReqDTO) {
@@ -82,7 +84,7 @@ public class UserMgmtServiceImpl implements UserMgmtService {
     @Override
     public AdminUpdateResponseDTO updateUser(Long id, AdminUpdateRequestDTO request) {
         User user = userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+                .orElseThrow(() -> new UserNotFoundException(unf + id));
         if (request.getFullName() != null) user.setFullName(request.getFullName());
         if (request.getEmail() != null) user.setEmail(request.getEmail());
         if (request.getPhone() != null) user.setPhone(request.getPhone());
@@ -107,7 +109,7 @@ public class UserMgmtServiceImpl implements UserMgmtService {
     @Override
     public int getLoyaltyPoints(Long userId) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + userId));
+                .orElseThrow(() -> new UserNotFoundException(unf + userId));
         return user.getLoyaltyPoints() != null ? user.getLoyaltyPoints() : 0;
     }
 
@@ -117,7 +119,7 @@ public class UserMgmtServiceImpl implements UserMgmtService {
         if (points < 0)
             throw new IllegalArgumentException("Points to add must be non-negative");
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + userId));
+                .orElseThrow(() -> new UserNotFoundException(unf + userId));
         int current = user.getLoyaltyPoints() != null ? user.getLoyaltyPoints() : 0;
         user.setLoyaltyPoints(current + points);
         userRepository.save(user);
@@ -131,10 +133,10 @@ public class UserMgmtServiceImpl implements UserMgmtService {
         if (points < 0)
             throw new IllegalArgumentException("Points to redeem must be non-negative");
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + userId));
+                .orElseThrow(() -> new UserNotFoundException(unf + userId));
         int current = user.getLoyaltyPoints() != null ? user.getLoyaltyPoints() : 0;
         if (points > current) {
-            throw new RuntimeException("Insufficient loyalty points. Available: " + current + ", Requested: " + points);
+            throw new UserNotFoundException("Insufficient loyalty points. Available: " + current + ", Requested: " + points);
         }
         user.setLoyaltyPoints(current - points);
         userRepository.save(user);

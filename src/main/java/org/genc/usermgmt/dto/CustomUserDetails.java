@@ -73,17 +73,16 @@
 
 package org.genc.usermgmt.dto;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Set;
-
+import lombok.Getter;
+import lombok.Setter;
 import org.genc.usermgmt.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Set;
 
 @Getter
 @Setter

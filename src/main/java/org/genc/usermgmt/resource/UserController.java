@@ -2,15 +2,16 @@ package org.genc.usermgmt.resource;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.genc.usermgmt.dto.*;
+import org.genc.usermgmt.dto.AdminUpdateRequestDTO;
+import org.genc.usermgmt.dto.UserProfileDTO;
 import org.genc.usermgmt.entity.User;
+import org.genc.usermgmt.exception.UserNotFoundException;
 import org.genc.usermgmt.repo.UserRepository;
 import org.genc.usermgmt.service.api.UserMgmtService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/userservice/users")
@@ -28,7 +29,7 @@ public class UserController {
     public ResponseEntity<List<UserProfileDTO>> getAllUsers() {
         List<UserProfileDTO> users = userRepository.findAll().stream()
                 .map(this::toProfileDTO)
-                .collect(Collectors.toList());
+                .toList();
         return ResponseEntity.ok(users);
     }
 
@@ -49,7 +50,6 @@ public class UserController {
     public ResponseEntity<UserProfileDTO> updateUser(
             @PathVariable Long id,
             @RequestBody AdminUpdateRequestDTO request) {
-        AdminUpdateResponseDTO res = userMgmtService.updateUser(id, request);
         User updated = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
         log.info("User {} updated successfully", id);
@@ -62,7 +62,7 @@ public class UserController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
         if (!userRepository.existsById(id)) {
-            throw new RuntimeException("User not found with id: " + id);
+            throw new UserNotFoundException("User not found with id: " + id);
         }
         userRepository.deleteById(id);
         log.info("User {} deleted", id);

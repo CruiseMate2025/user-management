@@ -44,7 +44,6 @@ class AuthControllerTest {
     @Test
     void testLoginSuccess() throws Exception {
         String username = "user";
-        String password = "pass";
         String token = "jwt";
         CustomUserDetails userDetails = Mockito.mock(CustomUserDetails.class);
         Mockito.when(userDetailsService.loadUserByUsername(username)).thenReturn(userDetails);
@@ -64,7 +63,7 @@ class AuthControllerTest {
 
 
     @Test
-    public void testLoginBadCredentials() throws Exception {
+    void testLoginBadCredentials() throws Exception {
         Mockito.doThrow(new org.springframework.security.authentication.BadCredentialsException("Bad credentials"))
                 .when(authenticationManager).authenticate(Mockito.any());
         String json = "{" +
@@ -79,7 +78,7 @@ class AuthControllerTest {
 
 
     @Test
-    public void testLoginServerError() throws Exception {
+    void testLoginServerError() throws Exception {
         Mockito.doThrow(new RuntimeException("Server error"))
                 .when(authenticationManager).authenticate(Mockito.any());
         String json = "{" +

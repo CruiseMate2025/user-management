@@ -15,7 +15,8 @@ import java.util.Map;
 public class ProfileController {
 
     private final UserMgmtService userMgmtService;
-
+    String userid = "userId";
+    String loyaltyPoints = "loyaltyPoints";
     /**
      * GET /api/v1/userservice/profile/loyalty/{userId}
      * Returns current loyalty points for the user.
@@ -23,7 +24,7 @@ public class ProfileController {
     @GetMapping("/loyalty/{userId}")
     public ResponseEntity<Map<String, Object>> getLoyaltyPoints(@PathVariable Long userId) {
         int points = userMgmtService.getLoyaltyPoints(userId);
-        return ResponseEntity.ok(Map.of("userId", userId, "loyaltyPoints", points));
+        return ResponseEntity.ok(Map.of(userid, userId, loyaltyPoints, points));
     }
 
     /**
@@ -36,7 +37,7 @@ public class ProfileController {
             @RequestParam int points) {
         int newBalance = userMgmtService.addLoyaltyPoints(userId, points);
         log.info("Added {} loyalty points to user {}. New balance: {}", points, userId, newBalance);
-        return ResponseEntity.ok(Map.of("userId", userId, "loyaltyPoints", newBalance));
+        return ResponseEntity.ok(Map.of(userid, userId, loyaltyPoints, newBalance));
     }
 
     /**
@@ -49,6 +50,6 @@ public class ProfileController {
             @RequestParam int points) {
         int newBalance = userMgmtService.redeemLoyaltyPoints(userId, points);
         log.info("Redeemed {} loyalty points from user {}. New balance: {}", points, userId, newBalance);
-        return ResponseEntity.ok(Map.of("userId", userId, "loyaltyPoints", newBalance));
+        return ResponseEntity.ok(Map.of(userid, userId, loyaltyPoints, newBalance));
     }
 }

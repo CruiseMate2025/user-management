@@ -90,11 +90,11 @@ public class JwtUtil {
     public String extractAndConcatenateRoles(CustomUserDetails userDetails) {
         Set<? extends GrantedAuthority> authorities = (Set<? extends GrantedAuthority>) userDetails.getAuthorities();
         if (authorities == null || authorities.isEmpty()) {
-            return ""; // Return empty string if no roles are found
+            return "";
         }
-        String rolesString = authorities.stream()
-                .map(GrantedAuthority::getAuthority) // Extracts the String role name (e.g., "ROLE_ADMIN")
+        // Inlining the stream logic to remove the local variable code smell
+        return authorities.stream()
+                .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.joining(","));
-        return rolesString;
     }
 }

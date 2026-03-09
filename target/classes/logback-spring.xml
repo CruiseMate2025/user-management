@@ -13,7 +13,6 @@
 
     <!-- Rolling File Appender -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <!--<file>${LOG_FILE}</file>-->
         <file>logs/gencapp.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- Roll over daily and when file size reaches 10MB -->

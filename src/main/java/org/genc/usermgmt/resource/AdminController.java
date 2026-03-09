@@ -3,8 +3,6 @@ package org.genc.usermgmt.resource;
 import lombok.RequiredArgsConstructor;
 import org.genc.usermgmt.dto.AdminUpdateRequestDTO;
 import org.genc.usermgmt.dto.AdminUpdateResponseDTO;
-import org.genc.usermgmt.dto.UserProfileDTO;
-import org.genc.usermgmt.dto.UserRegistrationResponseDTO;
 import org.genc.usermgmt.entity.User;
 import org.genc.usermgmt.repo.UserRepository;
 import org.genc.usermgmt.service.api.UserMgmtService;

@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.genc.usermgmt.dto.RoleRequestDTO;
 import org.genc.usermgmt.dto.UserRegistrationRequestDTO;
-import org.genc.usermgmt.entity.Role;
 import org.genc.usermgmt.enums.RoleType;
 import org.genc.usermgmt.service.api.RoleService;
 import org.genc.usermgmt.service.api.UserMgmtService;
