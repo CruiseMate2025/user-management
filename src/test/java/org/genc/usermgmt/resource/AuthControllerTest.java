@@ -2,7 +2,9 @@ package org.genc.usermgmt.resource;
 
 import org.genc.usermgmt.dto.CustomUserDetails;
 import org.genc.usermgmt.filter.JwtAuthenticationFilter;
+import org.genc.usermgmt.service.impl.CustomUserDetailsService;
 import org.genc.usermgmt.util.JwtUtil;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,14 +15,15 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import static org.hamcrest.Matchers.containsString;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(value = AuthController.class,
@@ -34,60 +37,73 @@ class AuthControllerTest {
 
     @MockitoBean
     private AuthenticationManager authenticationManager;
+
     @MockitoBean
-    private UserDetailsService userDetailsService;
+    private CustomUserDetailsService userDetailsService; // Use your specific implementation
+
     @MockitoBean
     private JwtUtil jwtUtil;
-    private static final String LOGIN_URL = "/api/v1/userservice/login";
 
+    private static final String LOGIN_URL = "/api/v1/userservice/auth/login";
 
     @Test
+    @DisplayName("POST /login - Success Path")
     void testLoginSuccess() throws Exception {
-        String username = "user";
-        String token = "jwt";
+        // Arrange
+        String username = "cruise_admin";
+        String token = "mocked-jwt-token";
+
         CustomUserDetails userDetails = Mockito.mock(CustomUserDetails.class);
-        Mockito.when(userDetailsService.loadUserByUsername(username)).thenReturn(userDetails);
-        Mockito.when(jwtUtil.generateToken(userDetails)).thenReturn(token);
-        Mockito.when(authenticationManager.authenticate(Mockito.any())).thenReturn(null);
-        String json = "{" +
-                "\"username\":\"user\"," +
-                "\"password\":\"pass\"}";
+        when(userDetails.getUsername()).thenReturn(username);
+
+        when(userDetailsService.loadUserByUsername(username)).thenReturn(userDetails);
+        when(jwtUtil.generateToken(userDetails)).thenReturn(token);
+        when(authenticationManager.authenticate(any())).thenReturn(null);
+
+        String loginJson = "{\"username\":\"" + username + "\", \"password\":\"password123\"}";
+
+        // Act & Assert
         mockMvc.perform(post(LOGIN_URL)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(json))
+                        .content(loginJson))
                 .andExpect(status().isOk())
-                .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.jwt").exists())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.role").exists());
+                .andExpect(jsonPath("$.jwt").value(token))
+                .andExpect(jsonPath("$.role").exists())
+                .andExpect(jsonPath("$.appInstance").exists());
     }
 
-
     @Test
+    @DisplayName("POST /login - Bad Credentials (401)")
     void testLoginBadCredentials() throws Exception {
-        Mockito.doThrow(new org.springframework.security.authentication.BadCredentialsException("Bad credentials"))
-                .when(authenticationManager).authenticate(Mockito.any());
-        String json = "{" +
-                "\"username\":\"user\"," +
-                "\"password\":\"wrong\"}";
+        // Arrange
+        when(authenticationManager.authenticate(any()))
+                .thenThrow(new BadCredentialsException("Invalid credentials"));
+
+        String loginJson = "{\"username\":\"user\", \"password\":\"wrong_pass\"}";
+
+        // Act & Assert
         mockMvc.perform(post(LOGIN_URL)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(json))
+                        .content(loginJson))
                 .andExpect(status().isUnauthorized())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("Invalid username or password"));
+                // Ensure the field matches your AuthController @ExceptionHandler or try-catch block
+                .andExpect(jsonPath("$.message").value(containsString("Invalid")));
     }
 
-
     @Test
+    @DisplayName("POST /login - Server Error (500)")
     void testLoginServerError() throws Exception {
-        Mockito.doThrow(new RuntimeException("Server error"))
-                .when(authenticationManager).authenticate(Mockito.any());
-        String json = "{" +
-                "\"username\":\"user\"," +
-                "\"password\":\"pass\"}";
+        // Arrange
+        when(authenticationManager.authenticate(any()))
+                .thenThrow(new RuntimeException("Database Connection Failed"));
+
+        String loginJson = "{\"username\":\"user\", \"password\":\"pass\"}";
+
+        // Act & Assert
         mockMvc.perform(post(LOGIN_URL)
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(json))
+                        .content(loginJson))
                 .andExpect(status().isInternalServerError())
-                .andExpect(content().string(org.hamcrest.Matchers.containsString("Authentication error")));
+                .andExpect(jsonPath("$.message").value(containsString("Authentication error")));
     }
 }

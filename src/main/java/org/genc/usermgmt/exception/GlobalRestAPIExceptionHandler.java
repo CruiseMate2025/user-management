@@ -78,9 +78,9 @@ public class GlobalRestAPIExceptionHandler {
     }
     @ExceptionHandler(UserNotFoundException.class)
     public ResponseEntity<Map<String, String>> handleUserNotFound(UserNotFoundException ex) {
-        Map<String, String> error = new HashMap<>();
-        error.put("message", ex.getMessage());
-        error.put("status", "404");
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+        Map<String, String> err = new HashMap<>();
+        err.put("message", ex.getMessage());
+        err.put("status", "404");
+        return new ResponseEntity<>(err, HttpStatus.NOT_FOUND);
     }
 }

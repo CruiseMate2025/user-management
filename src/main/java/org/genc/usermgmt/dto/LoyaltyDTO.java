@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class loyaltyDto {
-    private String Tier;
-    private Integer LoyaltyPoints;
+public class LoyaltyDTO {
+    private String tier;
+    private Integer loyaltyPoints;
 
 }
